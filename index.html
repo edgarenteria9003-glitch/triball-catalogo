@@ -87,9 +87,9 @@ section[id],footer[id]{scroll-margin-top:72px}
 @media (min-width:960px){.hero-copy .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}}
 .hero-stage{position:relative;container-type:inline-size;aspect-ratio:1.35;display:grid;place-items:center;margin-inline:-16px}
 @media (min-width:960px){.hero-stage{margin-inline:0;aspect-ratio:1}}
-.hero-word{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:30vw;font-size:calc(132cqw / var(--len,5));color:rgba(255,255,255,.92);white-space:nowrap;pointer-events:none;user-select:none}
+.hero-word{position:absolute;inset:0;display:flex;align-items:flex-start;justify-content:center;padding-top:3%;font-size:22vw;font-size:calc(112cqw / var(--len,5));color:rgba(255,255,255,.92);white-space:nowrap;pointer-events:none;user-select:none}
 .hero-word .ch{display:inline-block}
-.hero-shoe{position:relative;width:74%;transform:rotate(-8deg);z-index:1}
+.hero-shoe{position:relative;width:74%;margin-top:16%;transform:rotate(-8deg);z-index:1}
 .hero-shoe img{width:100%;height:auto;filter:drop-shadow(0 2px 2px color-mix(in srgb,var(--stage2) 40%,#000 60%)) drop-shadow(0 14px 18px color-mix(in srgb,var(--stage2) 55%,transparent))}
 .hero-shadow{position:absolute;left:20%;right:20%;bottom:14%;height:22px;border-radius:50%;background:radial-gradient(closest-side,color-mix(in srgb,var(--stage2) 35%,#000 65%),transparent);opacity:.55;filter:blur(6px);z-index:0}
 .hero-side{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;align-content:start}
@@ -108,9 +108,13 @@ section[id],footer[id]{scroll-margin-top:72px}
 .sizes button{flex:none;width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.72);font-weight:700;font-size:.92rem;font-variant-numeric:tabular-nums}
 .sizes button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
 .hero-side .btn{width:100%}
-.hero-side .more{text-align:center;font-weight:600;font-size:.92rem}
+.hero-side .more{text-align:center;font-weight:600;font-size:.92rem;text-decoration:none;opacity:.8}
+@media (min-width:960px){.hero-word{padding-top:10%}.hero-shoe{margin-top:8%}}
+@media (min-width:600px) and (max-width:959px){.hero-stage{width:100%;max-width:620px;margin-inline:auto;aspect-ratio:1.55}.hero-copy p{max-width:46ch}}
 
 /* Franja en movimiento */
+.mq-clip{overflow:hidden}
+html,body{overflow-x:clip}
 .marquee{background:var(--ink);color:var(--paper);overflow:hidden;padding-block:16px}
 .track{display:flex;width:max-content;animation:marq 30s linear infinite}
 .track span{font-style:italic;font-weight:900;font-stretch:70%;text-transform:uppercase;font-size:clamp(1.6rem,6vw,2.6rem);line-height:1;white-space:nowrap;padding-right:28px;display:flex;align-items:center;gap:28px}
@@ -120,7 +124,7 @@ section[id],footer[id]{scroll-margin-top:72px}
 
 /* Ranking */
 .rail{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin-top:26px;padding:4px max(16px,env(safe-area-inset-left,0px)) 10px;scroll-padding-inline:16px}
-@media (min-width:1240px){.rail{padding-inline:calc((100vw - 1240px)/2 + 16px)}}
+@media (min-width:1240px){.rail{padding-inline:calc((100vw - 1240px)/2 + 16px);scroll-padding-inline:calc((100vw - 1240px)/2 + 16px)}}
 .rk{flex:0 0 min(70vw,280px);scroll-snap-align:start;position:relative}
 .rk .num{position:absolute;top:8px;right:14px;z-index:2;font-style:italic;font-weight:900;font-stretch:70%;font-size:4.4rem;line-height:1;color:transparent;-webkit-text-stroke:2px var(--ink);pointer-events:none}
 
@@ -382,7 +386,7 @@ section[id]{scroll-margin-top:118px}
   </div>
 </section>
 
-<div class="marquee" aria-hidden="true"><div class="track" id="track"></div></div>
+<div class="mq-clip"><div class="marquee" aria-hidden="true"><div class="track" id="track"></div></div></div>
 <nav class="jump" id="jump" aria-label="Ir a"><a href="#top10">Top 10</a><a href="#tenis">Tenis</a><a href="#balones">Balones</a><a href="#proteccion">Protección</a><a href="#equipos">Equipos</a><a href="#mayor">Al por mayor</a><a href="#comprar">Cómo comprar</a></nav>
 
 <!-- Más pedidos -->
@@ -615,7 +619,7 @@ function shoeCard(t, rank){
   return `<article class="card">
     <button class="tile${t.cut?" cut":""}" type="button" data-slug="${t.slug}" aria-label="Ver colores de ${esc(name)}">${limg(t.slug,name)}${top && !rank?'<span class="hot">Top ventas</span>':""}<span class="tag">${t.n} ${t.n===1?"foto":"colores"}</span></button>
     <div class="ct"><span class="br">${esc(t.marca)}</span><h4>${esc(t.modelo)}</h4>
-      <div class="buy"><div>${priceHtml(t)}<small>Envío gratis<span class="szx"> · ${sizeTxt(t) || "Varias tallas"}</span></small></div>
+      <div class="buy"><div>${priceHtml(t)}<small>Envío gratis<span class="szx"> · ${t.dama&&t.hombre?"Tallas 35–44":t.hombre?"Tallas 39–44":t.dama?"Tallas 35–39":"Varias tallas"}</span></small></div>
       <a class="go" href="${wa(`Hola TRIBALL, vengo del catálogo. Quiero los ${name}. Talla: ___` + share(t.slug))}" target="_blank" rel="noopener" aria-label="Pedir ${esc(name)} por WhatsApp">${WA_SVG}</a></div></div></article>`;
 }
 function prodCard(p){
