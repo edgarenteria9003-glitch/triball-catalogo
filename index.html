@@ -4,6 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="description" content="Tenis de baloncesto y voleibol, balones y protección. Tienda en Cartago, envíos a toda Colombia. Pide por WhatsApp.">
+<meta property="og:title" content="TRIBALL · Tenis de baloncesto y voleibol">
+<meta property="og:description" content="Envío gratis a toda Colombia. Pide por WhatsApp.">
+<meta property="og:image" content="https://edgarenteria9003-glitch.github.io/triball-catalogo/img/nike-kobe-6.jpg">
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>Catálogo TRIBALL</title>
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -520,6 +523,9 @@ GEAR_CATS.forEach(([id,t]) => { if(!CAT_LABEL[id]) CAT_LABEL[id] = t; });
 const $ = s => document.querySelector(s);
 const fmt = n => "$" + n.toLocaleString("es-CO");
 const wa = t => "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(t);
+/* Enlace con vista previa: WhatsApp muestra la foto, nombre y precio del producto. */
+const SITE = "https://edgarenteria9003-glitch.github.io/triball-catalogo/";
+const share = id => "\n" + SITE + "p/" + id + ".html";
 const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const norm = s => String(s).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"");
 const WA_SVG = '<svg class="wa-ico" aria-hidden="true"><use href="#wa"/></svg>';
@@ -558,14 +564,14 @@ function shoeCard(t, rank){
     <button class="tile${t.cut?" cut":""}" type="button" data-slug="${t.slug}" aria-label="Ver colores de ${esc(name)}">${limg(t.slug,name)}${top && !rank?'<span class="hot">Top ventas</span>':""}<span class="tag">${t.n} ${t.n===1?"foto":"colores"}</span></button>
     <div class="ct"><span class="br">${esc(t.marca)}</span><h4>${esc(t.modelo)}</h4>
       <div class="buy"><div>${priceHtml(t)}<small>Envío gratis<span class="szx"> · ${sizeTxt(t) || "Varias tallas"}</span></small></div>
-      <a class="go" href="${wa(`Hola TRIBALL, vengo del catálogo. Quiero los ${name}. Talla: ___`)}" target="_blank" rel="noopener" aria-label="Pedir ${esc(name)} por WhatsApp">${WA_SVG}</a></div></div></article>`;
+      <a class="go" href="${wa(`Hola TRIBALL, vengo del catálogo. Quiero los ${name}. Talla: ___` + share(t.slug))}" target="_blank" rel="noopener" aria-label="Pedir ${esc(name)} por WhatsApp">${WA_SVG}</a></div></div></article>`;
 }
 function prodCard(p){
   return `<article class="card">
     <button class="tile${p.cut?" cut":""}" type="button" data-slug="${p.slug}" aria-label="Ver fotos de ${esc(p.nombre)}">${limg(p.slug,p.nombre)}${p.n>1?`<span class="tag">${p.n} fotos</span>`:""}</button>
     <div class="ct"><span class="br">${esc(CAT_LABEL[p.cat]||"")}</span><h4>${esc(p.nombre)}</h4>
       <div class="buy"><div>${priceHtml(p)}${p.detalle?`<small>${esc(p.detalle)}</small>`:""}</div>
-      <a class="go" href="${wa(`Hola TRIBALL, vengo del catálogo. Me interesa: ${p.nombre}${p.pmin?" ("+fmt(p.pmin)+")":""}`)}" target="_blank" rel="noopener" aria-label="Pedir ${esc(p.nombre)} por WhatsApp">${WA_SVG}</a></div></div></article>`;
+      <a class="go" href="${wa(`Hola TRIBALL, vengo del catálogo. Me interesa: ${p.nombre}${p.pmin?" ("+fmt(p.pmin)+")":""}` + share(p.slug))}" target="_blank" rel="noopener" aria-label="Pedir ${esc(p.nombre)} por WhatsApp">${WA_SVG}</a></div></div></article>`;
 }
 const emptyMsg = q => `<div class="empty">No encontramos ese modelo aquí. <a href="${wa("Hola TRIBALL, estoy buscando: "+(q||"___"))}" target="_blank" rel="noopener">Pregúntanos por WhatsApp</a> y lo conseguimos.</div>`;
 
@@ -575,7 +581,7 @@ window.HERO_COUNT = HERO.length;
 window.heroIndex = 0;
 function heroLink(){
   const t = BY_SLUG[HERO[window.heroIndex].slug];
-  $("#hero-buy").href = wa(`Hola TRIBALL, vengo del catálogo. Quiero los ${t.marca} ${t.modelo}. Talla: ${heroSize || "___"}`);
+  $("#hero-buy").href = wa(`Hola TRIBALL, vengo del catálogo. Quiero los ${t.marca} ${t.modelo}. Talla: ${heroSize || "___"}` + share(t.slug));
 }
 window.heroRender = i => {
   const h = HERO[i], t = BY_SLUG[h.slug];
@@ -720,7 +726,7 @@ async function openSheet(slug, btn){
     $("#sheet-g").innerHTML = cache[slug].map((c,i) => `<article class="card">
       <div class="tile">${img(c.img, name+", "+(shoe?"color ":"foto ")+(i+1))}<span class="tag">#${i+1}</span></div>
       <div class="ct"><div class="buy"><div>${c.p?`<span class="pr">${fmt(c.p)}</span>`:`<span class="pr ask">Consulta el precio</span>`}<small>${shoe?"Color":"Foto"} #${i+1}</small></div>
-      <a class="go" href="${wa(`Hola TRIBALL, vengo del catálogo. ${shoe?"Quiero los":"Me interesa:"} ${name}, ${shoe?"color":"foto"} #${i+1}${c.p?" ("+fmt(c.p)+")":""}${shoe?". Talla: ___":""}`)}" target="_blank" rel="noopener" aria-label="Pedir ${shoe?"color":"foto"} ${i+1} por WhatsApp">${WA_SVG}</a></div></div></article>`).join("");
+      <a class="go" href="${wa(`Hola TRIBALL, vengo del catálogo. ${shoe?"Quiero los":"Me interesa:"} ${name}, ${shoe?"color":"foto"} #${i+1}${c.p?" ("+fmt(c.p)+")":""}${shoe?". Talla: ___":""}` + share(slug+"-"+(i+1)))}" target="_blank" rel="noopener" aria-label="Pedir ${shoe?"color":"foto"} ${i+1} por WhatsApp">${WA_SVG}</a></div></div></article>`).join("");
   } catch(e) {
     $("#sheet-g").innerHTML = `<div class="empty" style="grid-column:1/-1">No se pudieron cargar las fotos. Revisa tu conexión o <a href="${wa("Hola TRIBALL, quiero ver los colores de "+name)}" target="_blank" rel="noopener">pídelas por WhatsApp</a>.</div>`;
   }
