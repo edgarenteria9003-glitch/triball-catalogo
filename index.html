@@ -87,8 +87,8 @@ section[id],footer[id]{scroll-margin-top:72px}
 .hero-word{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:30vw;font-size:calc(132cqw / var(--len,5));color:rgba(255,255,255,.92);white-space:nowrap;pointer-events:none;user-select:none}
 .hero-word .ch{display:inline-block}
 .hero-shoe{position:relative;width:74%;transform:rotate(-8deg);z-index:1}
-.hero-shoe img{width:100%;height:auto;filter:drop-shadow(0 24px 22px rgba(0,0,0,.28))}
-.hero-shadow{position:absolute;left:22%;right:22%;bottom:12%;height:18px;border-radius:50%;background:radial-gradient(closest-side,rgba(0,0,0,.35),transparent);z-index:0}
+.hero-shoe img{width:100%;height:auto;filter:drop-shadow(0 2px 2px color-mix(in srgb,var(--stage2) 40%,#000 60%)) drop-shadow(0 14px 18px color-mix(in srgb,var(--stage2) 55%,transparent))}
+.hero-shadow{position:absolute;left:20%;right:20%;bottom:14%;height:22px;border-radius:50%;background:radial-gradient(closest-side,color-mix(in srgb,var(--stage2) 35%,#000 65%),transparent);opacity:.55;filter:blur(6px);z-index:0}
 .hero-side{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;align-content:start}
 .hs-name{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:6px 12px}
 .hs-name small{display:block;font-size:.85rem;font-weight:600;opacity:.75}
@@ -127,7 +127,6 @@ section[id],footer[id]{scroll-margin-top:72px}
 @media (min-width:1080px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
 .card{display:flex;flex-direction:column;min-width:0;background:var(--mist);border-radius:20px;overflow:hidden}
 .tile{position:relative;display:block;width:100%;aspect-ratio:1;border:0;padding:0;background:var(--mist);overflow:hidden}
-.tile.cut::after{content:"";position:absolute;left:18%;right:18%;bottom:13%;height:9%;border-radius:50%;background:radial-gradient(closest-side,rgba(0,0,0,.18),transparent);z-index:0}
 .tile.cut img{position:relative;z-index:1;padding:6%;mix-blend-mode:normal}
 .tile img[data-lazy]{opacity:0;transition:opacity .5s ease}
 .tile img.ld{opacity:1}
