@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="description" content="Tenis de baloncesto y voleibol, balones y protección. Tienda en Cartago, envíos a toda Colombia. Pide por WhatsApp.">
+<meta name="description" content="Tenis de baloncesto y voleibol, balones y protección. Tienda en Cartago, envíos a toda Colombia. Ventas al por mayor. Pide por WhatsApp.">
 <meta property="og:title" content="TRIBALL · Tenis de baloncesto y voleibol">
-<meta property="og:description" content="Envío gratis a toda Colombia. Pide por WhatsApp.">
+<meta property="og:description" content="Envío gratis a toda Colombia. Ventas al detal y al por mayor. Pide por WhatsApp.">
 <meta property="og:image" content="https://edgarenteria9003-glitch.github.io/triball-catalogo/img/nike-kobe-6.jpg">
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>Catálogo TRIBALL</title>
@@ -206,6 +206,27 @@ section[id],footer[id]{scroll-margin-top:72px}
 .team h3{font-style:italic;font-weight:900;font-stretch:70%;text-transform:uppercase;font-size:2.4rem;line-height:.95}
 .team ol{margin:10px 0 0;padding-left:20px;display:grid;gap:4px}
 
+/* Al por mayor */
+.whole{background:var(--ink);color:var(--paper);margin-top:clamp(56px,11vw,112px);position:relative;overflow:hidden}
+.whole::before{content:"";position:absolute;right:-18%;top:-30%;width:70vmax;height:70vmax;border-radius:50%;background:radial-gradient(closest-side,rgba(255,91,20,.28),transparent 70%);pointer-events:none}
+.whole .wrap{position:relative;display:grid;gap:clamp(28px,5vw,48px);padding-block:clamp(56px,10vw,104px)}
+.whole .kick{display:inline-flex;align-items:center;gap:8px;font-size:.85rem;font-weight:700;color:var(--hot)}
+.whole .kick i{width:8px;height:8px;border-radius:50%;background:var(--hot);display:block}
+.whole h2{font-size:clamp(2.8rem,11vw,5.6rem);margin-top:12px}
+.whole h2 span{color:var(--hot)}
+.whole .lead{margin:16px 0 0;max-width:46ch;color:rgba(255,255,255,.72);font-size:1.05rem}
+.who{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.who span{border:1.5px solid rgba(255,255,255,.22);border-radius:999px;padding:7px 14px;font-size:.9rem;font-weight:600}
+.perks4{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+@media (min-width:900px){.whole .wrap{grid-template-columns:1.05fr 1fr;align-items:center}.perks4{gap:14px}}
+.pk{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:18px 16px;display:grid;gap:8px;align-content:start;min-width:0}
+.pk svg{width:26px;height:26px;stroke:var(--hot);fill:none;stroke-width:1.7}
+.pk b{font-size:1rem;line-height:1.2}
+.pk span{font-size:.85rem;color:rgba(255,255,255,.62);line-height:1.35}
+.whole .acts{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:26px}
+.whole .acts small{color:rgba(255,255,255,.55);font-size:.85rem}
+.whole .btn.wbtn{padding:16px 22px;background:var(--hot);color:var(--paper)}
+
 /* Información */
 .info{display:grid;gap:44px;margin-top:30px}
 @media (min-width:900px){.info{grid-template-columns:1fr 1fr;gap:56px 72px}}
@@ -318,7 +339,7 @@ section[id]{scroll-margin-top:118px}
   <div class="wrap">
     <a href="#hero" aria-label="TRIBALL, inicio"><img class="logo" src="data:image/png;base64,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" alt="TRIBALL" width="89" height="20"></a>
     <nav class="nav" aria-label="Secciones">
-      <a href="#top10">Más pedidos</a><a href="#tenis">Tenis</a><a href="#balones">Balones</a><a href="#proteccion">Protección</a><a href="#equipos">Equipos</a><a href="#comprar">Cómo comprar</a>
+      <a href="#top10">Más pedidos</a><a href="#tenis">Tenis</a><a href="#balones">Balones</a><a href="#proteccion">Protección</a><a href="#equipos">Equipos</a><a href="#mayor">Al por mayor</a><a href="#comprar">Cómo comprar</a>
     </nav>
     <div class="top-r">
       <button class="ibtn" id="menu" type="button" aria-label="Menú" aria-expanded="false"><svg viewBox="0 0 24 24"><path d="M4 9h16M4 15h16"/></svg></button>
@@ -353,7 +374,7 @@ section[id]{scroll-margin-top:118px}
 </section>
 
 <div class="marquee" aria-hidden="true"><div class="track" id="track"></div></div>
-<nav class="jump" id="jump" aria-label="Ir a"><a href="#top10">Top 10</a><a href="#tenis">Tenis</a><a href="#balones">Balones</a><a href="#proteccion">Protección</a><a href="#equipos">Equipos</a><a href="#comprar">Cómo comprar</a></nav>
+<nav class="jump" id="jump" aria-label="Ir a"><a href="#top10">Top 10</a><a href="#tenis">Tenis</a><a href="#balones">Balones</a><a href="#proteccion">Protección</a><a href="#equipos">Equipos</a><a href="#mayor">Al por mayor</a><a href="#comprar">Cómo comprar</a></nav>
 
 <!-- Más pedidos -->
 <section class="band" id="top10" aria-labelledby="h-top">
@@ -430,6 +451,28 @@ section[id]{scroll-margin-top:118px}
     <div class="grid" id="team-grid" style="margin-top:22px"></div>
     <div class="sub-h"><h3>NFL y chanclas</h3><span>Para antes y después del partido</span></div>
     <div class="grid" id="mas-grid"></div>
+  </div>
+</section>
+
+<!-- Al por mayor -->
+<section class="whole" id="mayor" aria-labelledby="h-mayor">
+  <div class="wrap">
+    <div>
+      <span class="kick"><i></i>Ventas al por mayor</span>
+      <h2 class="disp" id="h-mayor">Surte tu negocio<br><span>con TRIBALL.</span></h2>
+      <p class="lead">Precios especiales por volumen en tenis, balones, protección y uniformes. Despachamos a toda Colombia para que tú vendas con buen margen.</p>
+      <div class="who"><span>Tiendas deportivas</span><span>Revendedores</span><span>Clubes y ligas</span><span>Colegios y escuelas</span></div>
+      <div class="acts">
+        <a class="btn wbtn" id="whole-btn" target="_blank" rel="noopener"><svg class="wa-ico"><use href="#wa"/></svg>Pedir lista de precios mayoristas</a>
+        <small>Te respondemos por WhatsApp.</small>
+      </div>
+    </div>
+    <div class="perks4">
+      <div class="pk"><svg viewBox="0 0 24 24"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg><b>Precios por volumen</b><span>Entre más unidades, mejor precio por par.</span></div>
+      <div class="pk"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v5M16 4v5"/></svg><b>Surtido de marcas</b><span>Nike, Jordan, Adidas, Puma, Under Armour, Asics y más.</span></div>
+      <div class="pk"><svg viewBox="0 0 24 24"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17" r="1.6"/><circle cx="17" cy="17" r="1.6"/></svg><b>Despacho nacional</b><span>Enviamos tu pedido a cualquier ciudad de Colombia.</span></div>
+      <div class="pk"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5L15.5 10"/></svg><b>Asesoría directa</b><span>Te ayudamos a escoger los modelos que más se venden.</span></div>
+    </div>
   </div>
 </section>
 
@@ -738,6 +781,7 @@ addEventListener("keydown", e => { if (e.key==="Escape" && !$("#sheet").hidden) 
 document.addEventListener("click", e => { const b = e.target.closest("main button.tile[data-slug]"); if (b) openSheet(b.dataset.slug, b); });
 
 /* ---------- enlaces fijos ---------- */
+$("#whole-btn").href = wa("Hola TRIBALL, vengo del catálogo. Quiero información de ventas al por mayor.\nTipo de negocio: ___\nCiudad: ___\nProductos de interés: ___");
 $("#team-btn").href = wa("Hola TRIBALL, vengo del catálogo. Quiero cotizar uniformes para mi equipo. Cantidad: ___ Colores: ___");
 ["#cta-top","#cta-foot","#cta-bar","#fab"].forEach(s => $(s).href = wa("Hola TRIBALL, vengo del catálogo y quiero información"));
 
