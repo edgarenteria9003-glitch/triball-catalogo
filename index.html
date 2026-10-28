@@ -592,7 +592,7 @@ const PHOTO = {};
 async function loadPhoto(el){
   const slug = el.dataset.lazy; if (!slug || el.dataset.req) return; el.dataset.req = 1;
   try {
-    if (!PHOTO[slug]) PHOTO[slug] = fetch("c/"+slug+".json?v=20261028.8").then(r => { if(!r.ok) throw 0; return r.json(); });
+    if (!PHOTO[slug]) PHOTO[slug] = fetch("c/"+slug+".json?v=20261028.9").then(r => { if(!r.ok) throw 0; return r.json(); });
     const d = await PHOTO[slug];
     el.onload = () => el.classList.add("ld"); el.src = d.img;
   } catch(e) { el.classList.add("ld","fail"); }
@@ -782,7 +782,7 @@ async function openSheet(slug, btn){
   $("#sheet-g").innerHTML = '<div class="empty" style="grid-column:1/-1">Cargando fotos…</div>';
   $("#sheet").hidden = false; document.body.style.overflow = "hidden"; $("#sheet-x").focus();
   try {
-    if (!cache[slug]) { const r = await fetch("m/"+slug+".json?v=20261028.8"); if(!r.ok) throw 0; cache[slug] = await r.json(); }
+    if (!cache[slug]) { const r = await fetch("m/"+slug+".json?v=20261028.9"); if(!r.ok) throw 0; cache[slug] = await r.json(); }
     $("#sheet-g").innerHTML = cache[slug].map((c,i) => `<article class="card">
       <div class="tile">${img(c.img, name+", "+(shoe?"color ":"foto ")+(i+1))}<span class="tag">#${i+1}</span></div>
       <div class="ct"><div class="buy"><div>${c.p?`<span class="pr">${fmt(c.p)}</span>`:`<span class="pr ask">Consulta el precio</span>`}<small>${shoe?"Color":"Foto"} #${i+1}</small></div>
