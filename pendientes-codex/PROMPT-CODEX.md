@@ -13,23 +13,25 @@ cajas, una estatua de fondo, varios zapatos juntos, carteles con precio o marcas
 La lista exacta está en `pendientes-codex/lista.json`. Para ver las fotos que tienes que rehacer, corre:
 
 ```bash
-python3 pendientes-codex/extraer_referencias.py --prioridad 1
+python3 pendientes-codex/extraer_referencias.py --prioridad 99   # solo saca las portadas
 ```
 
 Eso deja cada foto actual en `pendientes-codex/referencias/<slug>/<slug>-color-NN.jpg`
-(y las portadas en `pendientes-codex/referencias/_portadas/`). Cambia el número de prioridad para las tandas siguientes.
+(las portadas quedan en `pendientes-codex/referencias/_portadas/`).
 
 ## Orden de trabajo
 
-| Prioridad | Qué es | Fotos |
-|---|---|---|
-| Portadas | 8 portadas (Hyperset y tenis de niños, Nike Mind, velcro) | 8 |
-| 1 | Modelos de "Lo que más se llevan" (Ja 3, Hyperset, Metarise, Sky Elite FF 3, Court FF 3, Mizuno Wave Momentum) | 60 |
-| 2 | Resto de modelos de tenis | 355 |
-| 3 | Asics y Mizuno "más referencias" | 135 |
-| 4 | Accesorios y ropa (solo si sobra tiempo) | 499 |
+**Desde el 29 de octubre Codex solo hace portadas** (la primera foto de cada producto).
+Las galerías de colores se quedan con fotos reales del inventario: un render puede cambiar
+detalles del zapato y el cliente debe ver exactamente lo que va a recibir.
 
-Haz una tanda, súbela y para. No hace falta terminar todo de una vez.
+Pendientes:
+
+| Qué | Archivo |
+|---|---|
+| Portada de "Nike niños con velcro" (el render anterior salió como guayo con taches; es un tenis, sin taches) | `imagenes codex/_portadas/x-nike-ni-os-con-velcro.png` |
+
+No hagas renders de galería (`imagenes codex/<slug>/<slug>-color-NN.png`) aunque aparezcan en `lista.json`.
 
 ## Reglas del render (tenis)
 
@@ -44,7 +46,7 @@ Haz una tanda, súbela y para. No hace falta terminar todo de una vez.
 7. Si en la foto no se distingue bien el color o el modelo, **no lo inventes**: anótalo en
    `imagenes codex/no-se-pudo.txt` con el nombre del archivo y el motivo.
 
-## Reglas para accesorios (prioridad 4)
+## Reglas para portadas de accesorios
 
 Producto solo sobre fondo transparente, de frente, sin personas, sin texto y sin precios.
 Si la foto es un cartel con varios productos, haz un render por producto y numéralos `-a`, `-b`, etc.
@@ -67,4 +69,4 @@ y publicar.
 
 ## Al terminar cada tanda
 
-Haz commit con el mensaje `Renders Codex: prioridad N` y súbelo a la rama `main`.
+Haz commit con el mensaje `Renders Codex: portadas` y súbelo a la rama `main`.
