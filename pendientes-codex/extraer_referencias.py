@@ -47,7 +47,11 @@ def main():
             nombre = f'{item["slug"]}-color-{n:02d}.jpg'
             guardar(cargar(galeria[n - 1]["img"]), os.path.join(SALIDA, item["slug"], nombre))
             total += 1
-    for item in lista["portadas"]:
+        for n in item.get("revisar", []):
+            nombre = f'{item["slug"]}-color-{n:02d}.jpg'
+            guardar(cargar(galeria[n - 1]["img"]), os.path.join(SALIDA, item["slug"], "revisar", nombre))
+            total += 1
+    for item in ([] if solo else lista["portadas"]):
         portada = json.load(open(os.path.join(RAIZ, "c", item["slug"] + ".json"), encoding="utf-8"))
         guardar(cargar(portada["img"]), os.path.join(SALIDA, "_portadas", item["slug"] + ".jpg"))
         total += 1
