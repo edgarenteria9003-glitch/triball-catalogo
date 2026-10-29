@@ -10,3 +10,20 @@ x-tobillera-deportiva: La marca de la referencia no es legible y el render inven
 x-camiseta-compresiva-manga-larga: La foto borrosa no permite confirmar si los tonos y formas son parte del diseño o sombras.
 x-toalla-gatorade: La referencia muestra varias toallas y no permite confirmar el diseño de una sola.
 x-mangas-de-pierna-nike: La referencia no muestra las mangas separadas y los intentos conservan marcas o residuos visibles.
+
+Galerías prioridad 1 (lista actual):
+nike-ja-3-color-07.png: Solo se ve desde arriba; el lateral no se puede confirmar.
+nike-ja-3-color-15.png: La foto muestra dos colores distintos.
+nike-ja-3-color-17.png: La foto está recortada y no muestra el zapato completo.
+asics-sky-elite-ff-3-color-09.png: La foto recorta la punta del tenis.
+asics-sky-elite-ff-3-color-10.png: La foto recorta la punta del tenis.
+nike-hyperset-color-06.png: La foto recorta la punta y el talón.
+asics-metarise-color-06.png: La foto recorta el zapato.
+mizuno-wave-momentum-color-02.png: La foto recorta la punta del tenis.
+asics-metarise-color-05.png: La imagen de revisión está recortada y contiene marca de agua.
+nike-ja-3-color-12.png: El render cambia la forma del distintivo rojo del lateral.
+nike-ja-3-color-13.png: El render cambia la forma del distintivo rojo del lateral.
+nike-hyperset-color-07.png: No se pudo reproducir con confianza la disposición original de las correas.
+nike-hyperset-color-08.png: No se pudo reproducir con confianza la disposición original de las correas.
+nike-hyperset-color-09.png: No se pudo reproducir con confianza la disposición original de las correas.
+nike-st-charger-color-01.png: El segundo intento continúa mostrando una vista de tres cuartos, no perfil lateral.
