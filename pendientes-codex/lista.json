@@ -1,49 +1,9 @@
 {
  "portadas": [
   {
-   "slug": "x-nike-ni-os-con-velcro",
-   "nombre": "Nike niños con velcro",
-   "motivo": "Tenis rosado de niños con correa de velcro. Es un TENIS: suela plana de caucho, sin taches. El render anterior salió como guayo de fútbol."
-  },
-  {
-   "slug": "x-molten-1400-1500-2200",
-   "nombre": "Molten 1400 / 1500 / 2200",
-   "motivo": "La portada actual está dañada (el centro del balón salió en blanco). Render del balón Molten verde, blanco y rojo, completo."
-  },
-  {
-   "slug": "x-rodillera-de-baloncesto",
-   "nombre": "Rodillera de baloncesto",
-   "motivo": "Sale puesta en piernas de una persona. Solo el par de rodilleras."
-  },
-  {
-   "slug": "x-rodillera-deportiva",
-   "nombre": "Rodillera deportiva",
-   "motivo": "Sale puesta en una persona. Solo la rodillera."
-  },
-  {
-   "slug": "x-rodillera-protectora",
-   "nombre": "Rodillera protectora",
-   "motivo": "Sale puesta en piernas. Solo la rodillera."
-  },
-  {
-   "slug": "x-rodillera-con-correas",
-   "nombre": "Rodillera con correas",
-   "motivo": "Sale puesta en una pierna. Solo la rodillera con sus correas."
-  },
-  {
    "slug": "x-tobillera-deportiva",
    "nombre": "Tobillera deportiva",
    "motivo": "Sale puesta en un pie. Solo la tobillera."
-  },
-  {
-   "slug": "x-mangas-compresivas-antebrazo",
-   "nombre": "Mangas compresivas antebrazo",
-   "motivo": "Collage con varias fotos. Solo el par de mangas de antebrazo."
-  },
-  {
-   "slug": "x-mangas-brazo-completo",
-   "nombre": "Mangas brazo completo",
-   "motivo": "Sale puesta en una persona. Solo la manga."
   },
   {
    "slug": "x-mangas-de-pierna-nike",
@@ -56,89 +16,9 @@
    "motivo": "Foto borrosa con un balón. Solo la camiseta, de frente."
   },
   {
-   "slug": "x-camiseta-uni-manga-larga",
-   "nombre": "Camiseta uni manga larga",
-   "motivo": "Collage con personas. Solo la camiseta, de frente."
-  },
-  {
-   "slug": "x-camiseta-compresiva-manga-corta",
-   "nombre": "Camiseta compresiva manga corta",
-   "motivo": "Collage con personas. Solo la camiseta, de frente."
-  },
-  {
-   "slug": "x-camiseta-uni-manga-corta",
-   "nombre": "Camiseta uni manga corta",
-   "motivo": "Sale la foto de un jugador famoso. Solo la camiseta compresiva, de frente, sin personas."
-  },
-  {
-   "slug": "x-licra-larga-compresiva",
-   "nombre": "Licra larga compresiva",
-   "motivo": "Collage con personas. Solo la licra."
-  },
-  {
-   "slug": "x-licra-unipierna-compresiva",
-   "nombre": "Licra unipierna compresiva",
-   "motivo": "Sale puesta en personas. Solo la licra."
-  },
-  {
-   "slug": "x-licra-compresiva-media",
-   "nombre": "Licra compresiva media",
-   "motivo": "Collage con personas. Solo la licra."
-  },
-  {
-   "slug": "x-balacas-licra",
-   "nombre": "Balacas licra",
-   "motivo": "Foto de una pared llena de empaques. Tres balacas de licra en fila, sin empaque."
-  },
-  {
-   "slug": "x-balacas-algodon",
-   "nombre": "Balacas algodón",
-   "motivo": "Pila de empaques. Tres balacas de algodón en fila, sin empaque."
-  },
-  {
-   "slug": "x-media-antideslizante",
-   "nombre": "Media antideslizante",
-   "motivo": "Collage. Solo el par de medias antideslizantes."
-  },
-  {
-   "slug": "x-protector-bucal",
-   "nombre": "Protector bucal",
-   "motivo": "Sale la cara de un jugador famoso. Solo el protector bucal."
-  },
-  {
-   "slug": "x-termo-gatorade",
-   "nombre": "Termo Gatorade",
-   "motivo": "Collage de varios termos. Un solo termo."
-  },
-  {
    "slug": "x-toalla-gatorade",
    "nombre": "Toalla Gatorade",
    "motivo": "Collage. Una sola toalla doblada."
-  },
-  {
-   "slug": "x-roller-foam",
-   "nombre": "Roller foam",
-   "motivo": "Sale una persona usándolo. Solo el roller."
-  },
-  {
-   "slug": "x-uniforme-ninos",
-   "nombre": "Uniforme niños",
-   "motivo": "Sale un niño modelando. Solo la camiseta y la pantaloneta, sin persona."
-  },
-  {
-   "slug": "x-esqueletos-deportivos",
-   "nombre": "Esqueletos deportivos",
-   "motivo": "Pila de varias prendas. Un solo esqueleto, de frente."
-  },
-  {
-   "slug": "x-camisetas-nfl",
-   "nombre": "Camisetas NFL",
-   "motivo": "Dos camisetas juntas. Una sola camiseta, de frente."
-  },
-  {
-   "slug": "x-pantalonetas",
-   "nombre": "Pantalonetas",
-   "motivo": "Dos pantalonetas juntas. Una sola pantaloneta, de frente."
   }
  ],
  "galerias": []
