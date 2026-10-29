@@ -28,7 +28,14 @@ La lista está en `pendientes-codex/lista.json`, sección `galerias`. Cada model
 | 3 | Tenis de niños | 38 | 0 |
 | 4 | Asics y Mizuno "más referencias" | 100 | 4 |
 
-La prioridad 2 es grande: puedes partirla en varias tandas, por ejemplo por marca, siguiendo el orden de la lista.
+La prioridad 2 es grande: hazla por marca con `--marca`. Orden: `nike` (190 + 181), `jordan` (26 + 15),
+`adidas` (44 + 11), `puma` (38 + 21), `under` (Under Armour, 10 + 23), y al final `asics`, `on` y `reebok` juntos.
+
+```bash
+python3 pendientes-codex/extraer_referencias.py --prioridad 2 --marca nike
+```
+
+Commit de cada marca: `Renders Codex: galerías prioridad 2 <marca>`.
 
 Para sacar las fotos de referencia de una tanda, corre desde la raíz del repo:
 

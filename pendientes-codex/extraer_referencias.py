@@ -37,10 +37,15 @@ def main():
     solo = None
     if "--prioridad" in sys.argv:
         solo = int(sys.argv[sys.argv.index("--prioridad") + 1])
+    marca = None
+    if "--marca" in sys.argv:
+        marca = sys.argv[sys.argv.index("--marca") + 1].lower()
     lista = json.load(open(os.path.join(RAIZ, "pendientes-codex", "lista.json"), encoding="utf-8"))
     total = 0
     for item in lista["galerias"]:
         if solo and item["prioridad"] != solo:
+            continue
+        if marca and item["slug"].split("-")[0] != marca:
             continue
         galeria = json.load(open(os.path.join(RAIZ, "m", item["slug"] + ".json"), encoding="utf-8"))
         for n in item["posiciones"]:
