@@ -27,106 +27,57 @@
    "slug": "nike-ja-3",
    "nombre": "Nike Ja 3",
    "posiciones": [
-    1,
-    2,
-    3,
-    4,
-    5,
-    6,
     7,
-    8,
-    9,
     12,
     13,
-    14,
     15,
-    16,
-    17,
-    18,
-    19
+    17
    ],
-   "revisar": [
-    10,
-    11,
-    20
-   ]
+   "revisar": []
   },
   {
    "prioridad": 1,
    "slug": "asics-sky-elite-ff-3",
    "nombre": "Asics Sky Elite FF 3",
    "posiciones": [
-    2,
-    3,
-    4,
-    5,
-    6,
-    7,
-    8,
     9,
-    10,
-    11
+    10
    ],
-   "revisar": [
-    1
-   ]
+   "revisar": []
   },
   {
    "prioridad": 1,
    "slug": "nike-hyperset",
    "nombre": "Nike Hyperset",
    "posiciones": [
-    1,
-    2,
-    3,
-    4,
-    5,
     6,
     7,
     8,
     9
    ],
-   "revisar": [
-    10,
-    11,
-    12
-   ]
+   "revisar": []
   },
   {
    "prioridad": 1,
    "slug": "asics-metarise",
    "nombre": "Asics Metarise",
    "posiciones": [
-    2,
-    3,
-    4,
-    6,
-    7,
-    8
+    6
    ],
-   "revisar": [
-    1,
-    5
-   ]
+   "revisar": []
   },
   {
    "prioridad": 1,
    "slug": "asics-court-ff-3",
    "nombre": "Asics Court FF 3",
-   "posiciones": [
-    2,
-    3
-   ],
-   "revisar": [
-    1
-   ]
+   "posiciones": [],
+   "revisar": []
   },
   {
    "prioridad": 1,
    "slug": "mizuno-wave-momentum",
    "nombre": "Mizuno Wave Momentum",
    "posiciones": [
-    1,
     2
    ],
    "revisar": []
@@ -136,18 +87,14 @@
    "slug": "nike-st-flare",
    "nombre": "Nike ST Flare",
    "posiciones": [],
-   "revisar": [
-    1
-   ]
+   "revisar": []
   },
   {
    "prioridad": 1,
    "slug": "nike-st-charger",
    "nombre": "Nike ST Charger",
    "posiciones": [],
-   "revisar": [
-    1
-   ]
+   "revisar": []
   },
   {
    "prioridad": 2,
