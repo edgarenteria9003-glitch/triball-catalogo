@@ -1,0 +1,8 @@
+nike-ja-3-color-07.png: La referencia solo muestra el calzado desde arriba; no permite comprobar el lateral.
+nike-ja-3-color-15.png: La referencia muestra dos colores distintos sin indicar cuál corresponde a esta posición.
+nike-ja-3-color-17.png: La referencia está recortada y no muestra el zapato completo.
+nike-hyperset-color-09.png: La referencia está recortada en ambos extremos del zapato.
+mizuno-wave-momentum-color-02.png: La referencia no muestra la punta del zapato.
+nike-ja-3-color-13.png: El render cambia la ubicación del logo y el segundo intento no conserva un fondo transparente limpio.
+nike-hyperset-color-08.png: El primer render conserva una etiqueta; el segundo añade fondo y no respeta el encuadre.
+nike-hyperset-color-11.png: Los renders alteran el diseño de las correas; no se pudo confirmar el modelo.
