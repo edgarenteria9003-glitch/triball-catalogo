@@ -265,6 +265,7 @@
    "slug": "puma-lamelo-mb-02",
    "nombre": "Puma LaMelo MB.02",
    "posiciones": [
+    1,
     2,
     3,
     4,
@@ -277,9 +278,7 @@
     11,
     12
    ],
-   "revisar": [
-    1
-   ]
+   "revisar": []
   },
   {
    "prioridad": 2,
@@ -350,15 +349,14 @@
     6,
     7,
     8,
-    9
-   ],
-   "revisar": [
+    9,
     10,
     11,
     12,
     13,
     14
-   ]
+   ],
+   "revisar": []
   },
   {
    "prioridad": 2,
@@ -367,6 +365,7 @@
    "posiciones": [
     1,
     2,
+    3,
     4,
     5,
     6,
@@ -375,7 +374,6 @@
     10
    ],
    "revisar": [
-    3,
     9,
     11,
     12,
@@ -436,6 +434,7 @@
    "slug": "puma-lamelo-mb-01",
    "nombre": "Puma LaMelo MB.01",
    "posiciones": [
+    1,
     2,
     3,
     4,
@@ -444,9 +443,7 @@
     7,
     8
    ],
-   "revisar": [
-    1
-   ]
+   "revisar": []
   },
   {
    "prioridad": 2,
@@ -527,35 +524,33 @@
    "slug": "puma-lamelo-mb-03",
    "nombre": "Puma LaMelo MB.03",
    "posiciones": [
-    2,
-    5,
-    8,
-    9,
-    10
-   ],
-   "revisar": [
     1,
+    2,
     3,
     4,
+    5,
     6,
     7,
+    8,
+    9,
+    10,
     11
-   ]
+   ],
+   "revisar": []
   },
   {
    "prioridad": 2,
    "slug": "under-armour-curry-2",
    "nombre": "Under Armour Curry 2",
    "posiciones": [
+    1,
     2,
     3,
     4,
-    5
-   ],
-   "revisar": [
-    1,
+    5,
     6
-   ]
+   ],
+   "revisar": []
   },
   {
    "prioridad": 2,
@@ -626,12 +621,10 @@
    "slug": "under-armour-curry-1",
    "nombre": "Under Armour Curry 1",
    "posiciones": [
+    1,
     2,
     3,
-    4
-   ],
-   "revisar": [
-    1,
+    4,
     5,
     6,
     7,
@@ -640,7 +633,8 @@
     10,
     11,
     12
-   ]
+   ],
+   "revisar": []
   },
   {
    "prioridad": 2,
@@ -757,17 +751,16 @@
    "slug": "puma-lamelo-mb-05",
    "nombre": "Puma LaMelo MB.05",
    "posiciones": [
+    1,
     2,
     3,
-    4
-   ],
-   "revisar": [
-    1,
+    4,
     5,
     6,
     7,
     8
-   ]
+   ],
+   "revisar": []
   },
   {
    "prioridad": 2,
@@ -854,12 +847,11 @@
    "slug": "puma-all-pro-nitro",
    "nombre": "Puma All-Pro Nitro",
    "posiciones": [
+    1,
     2,
     3
    ],
-   "revisar": [
-    1
-   ]
+   "revisar": []
   },
   {
    "prioridad": 2,
@@ -1016,13 +1008,14 @@
    "prioridad": 2,
    "slug": "on-on-indoor",
    "nombre": "On On indoor",
-   "posiciones": [],
-   "revisar": [
-    1,
+   "posiciones": [
     2,
     3,
     4,
     5
+   ],
+   "revisar": [
+    1
    ]
   },
   {
@@ -1113,13 +1106,13 @@
    "prioridad": 2,
    "slug": "under-armour-curry-4",
    "nombre": "Under Armour Curry 4",
-   "posiciones": [],
-   "revisar": [
+   "posiciones": [
     1,
     2,
     3,
     4
-   ]
+   ],
+   "revisar": []
   },
   {
    "prioridad": 2,
@@ -1320,10 +1313,10 @@
    "prioridad": 2,
    "slug": "puma-puma-varios",
    "nombre": "Puma Puma (varios)",
-   "posiciones": [],
-   "revisar": [
+   "posiciones": [
     1
-   ]
+   ],
+   "revisar": []
   },
   {
    "prioridad": 2,
@@ -1351,11 +1344,11 @@
    "prioridad": 2,
    "slug": "reebok-angel-1",
    "nombre": "Reebok Angel 1",
-   "posiciones": [],
-   "revisar": [
+   "posiciones": [
     1,
     2
-   ]
+   ],
+   "revisar": []
   },
   {
    "prioridad": 2,
@@ -1370,8 +1363,7 @@
    "prioridad": 2,
    "slug": "under-armour-curry-3",
    "nombre": "Under Armour Curry 3",
-   "posiciones": [],
-   "revisar": [
+   "posiciones": [
     1,
     2,
     3,
@@ -1379,7 +1371,8 @@
     5,
     6,
     7
-   ]
+   ],
+   "revisar": []
   },
   {
    "prioridad": 2,
@@ -1580,6 +1573,7 @@
     69,
     70,
     71,
+    72,
     73,
     74,
     75,
@@ -1591,6 +1585,7 @@
     81,
     82,
     83,
+    85,
     86,
     87,
     88,
@@ -1613,9 +1608,7 @@
    ],
    "revisar": [
     68,
-    72,
-    84,
-    85
+    84
    ]
   }
  ]

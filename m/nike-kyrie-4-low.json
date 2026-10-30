@@ -1,17 +1,1 @@
-[
-  {
-    "img": "assets/nike-kyrie-4-low-color-01-alpha.webp",
-    "p": 250000,
-    "real": false
-  },
-  {
-    "img": "assets/nike-kyrie-4-low-color-02-alpha.webp",
-    "p": 250000,
-    "real": false
-  },
-  {
-    "img": "assets/nike-kyrie-4-low-color-03-alpha.webp",
-    "p": 250000,
-    "real": false
-  }
-]
+[{"img": "assets/nike-kyrie-4-low-color-01-alpha.webp", "p": 250000, "real": false}, {"img": "assets/nike-kyrie-4-low-color-02-alpha.webp", "p": 250000, "real": false}, {"img": "assets/nike-kyrie-4-low-color-03-alpha.webp", "p": 250000, "real": false}]

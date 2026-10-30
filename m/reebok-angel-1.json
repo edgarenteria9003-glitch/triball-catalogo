@@ -1,12 +1,1 @@
-[
-  {
-    "img": "assets/reebok-angel-1-01.png",
-    "p": null,
-    "real": false
-  },
-  {
-    "img": "assets/reebok-angel-1-02.png",
-    "p": null,
-    "real": false
-  }
-]
+[{"img": "assets/reebok-angel-1-01.png", "p": null, "real": false}, {"img": "assets/reebok-angel-1-02.png", "p": null, "real": false}]
