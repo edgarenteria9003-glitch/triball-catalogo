@@ -560,7 +560,6 @@ section[id]{scroll-margin-top:118px}
   <div class="sheet-in">
     <div class="grab" aria-hidden="true"></div>
     <div class="sheet-h"><div><h3 id="sheet-t"></h3><small id="sheet-s"></small></div><button class="x" id="sheet-x" type="button" aria-label="Cerrar">×</button></div>
-    <p class="sheet-note">Las fotos son de referencia. Antes de comprar, pídenos fotos o video reales del par. <a id="sheet-real" target="_blank" rel="noopener">Pedir fotos reales</a></p>
     <div class="sheet-b"><div class="grid" id="sheet-g"></div></div>
   </div>
 </div>
@@ -603,7 +602,7 @@ const PHOTO = {};
 async function loadPhoto(el){
   const slug = el.dataset.lazy; if (!slug || el.dataset.req) return; el.dataset.req = 1;
   try {
-    if (!PHOTO[slug]) PHOTO[slug] = fetch("c/"+slug+".json?v=20261030.3").then(r => { if(!r.ok) throw 0; return r.json(); });
+    if (!PHOTO[slug]) PHOTO[slug] = fetch("c/"+slug+".json?v=20261030.4").then(r => { if(!r.ok) throw 0; return r.json(); });
     const d = await PHOTO[slug];
     el.onload = () => el.classList.add("ld"); el.src = d.img;
   } catch(e) { el.classList.add("ld","fail"); }
@@ -864,12 +863,11 @@ async function openSheet(slug, btn){
   const t = BY_SLUG[slug]; if(!t) return; lastBtn = btn;
   const shoe = !!t.modelo, name = shoe ? t.marca+" "+t.modelo : t.nombre;
   $("#sheet-t").textContent = name;
-  $("#sheet-real").href = wa("Hola TRIBALL, vengo del catálogo. ¿Me envían fotos o video reales de "+name+"?");
   $("#sheet-s").textContent = shoe ? sizeTxt(t)+" · "+t.n+(t.n===1?" foto":" colores") : (t.detalle || (t.n+" fotos"));
   $("#sheet-g").innerHTML = '<div class="empty" style="grid-column:1/-1">Cargando fotos…</div>';
   $("#sheet").hidden = false; document.body.style.overflow = "hidden"; $("#sheet-x").focus();
   try {
-    if (!cache[slug]) { const r = await fetch("m/"+slug+".json?v=20261030.3"); if(!r.ok) throw 0; cache[slug] = await r.json(); }
+    if (!cache[slug]) { const r = await fetch("m/"+slug+".json?v=20261030.4"); if(!r.ok) throw 0; cache[slug] = await r.json(); }
     $("#sheet-g").innerHTML = cache[slug].map((c,i) => c.oculto ? "" : `<article class="card">
       <div class="tile">${img(c.img, name+", "+(shoe?"color ":"foto ")+(i+1))}<span class="tag">#${i+1}</span></div>
       <div class="ct"><div class="buy"><div>${c.p?`<span class="pr">${fmt(c.p)}</span>`:`<span class="pr ask">Consulta el precio</span>`}<small>${shoe?"Color":"Foto"} #${i+1}</small></div>
