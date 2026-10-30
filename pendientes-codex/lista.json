@@ -1222,8 +1222,6 @@
    "slug": "x-jordan-ni-os",
    "nombre": "Jordan niños",
    "posiciones": [
-    1,
-    2,
     3,
     4,
     5
@@ -1235,13 +1233,8 @@
    "slug": "x-kyrie-7-ni-os",
    "nombre": "Kyrie 7 niños",
    "posiciones": [
-    1,
-    2,
     3,
-    4,
     5,
-    6,
-    7,
     8
    ],
    "revisar": []
@@ -1252,9 +1245,7 @@
    "nombre": "KD Trey 5 niños",
    "posiciones": [
     1,
-    2,
-    3,
-    4
+    2
    ],
    "revisar": []
   },
