@@ -43,5 +43,6 @@ Revisión 2026-10-30 (tarde): posiciones sin foto oficial igual, se deja la foto
   x-kd-trey-5-ni-os: 1 2 sin oficial igual (colores de la versión niño no coinciden)
   x-jordan-ni-os (6 Rings): 3 4 5 sin oficial igual
   under-armour-curry-12: 2 3 4 GOAT no tiene Curry 12; buscar en underarmour.com
-  asics-y-mizuno-m-s-referencias: 102 fotos de tienda con modelos mezclados (Rocket, Netburner, Sky Elite,
-    Metarise, Wave Lightning, Stealth) y varias réplicas; hay que separar por modelo antes de buscar oficiales.
+  asics-y-mizuno-m-s-referencias: separada por modelo; 37 montadas (Gel-Resolution 9, Wave Lightning Z8,
+    Sky Elite FF 2/3, Netburner Ballistic FF 3). Quedan 65 sin oficial igual: pares mezclados, diseños de
+    réplica (Pikachu 54-58), otros modelos (61 Nike) o colores que GOAT no trae (ver lista.json).
