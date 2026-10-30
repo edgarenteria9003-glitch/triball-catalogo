@@ -140,18 +140,9 @@
    "posiciones": [
     2,
     3,
-    4,
-    5,
     6,
     7,
-    8,
-    9,
-    10,
-    11,
-    12,
-    13,
-    14,
-    15
+    8
    ],
    "revisar": [
     1,
@@ -191,18 +182,10 @@
    "slug": "adidas-ae-2",
    "nombre": "Adidas AE 2",
    "posiciones": [
-    2,
-    3,
-    4,
     5,
     6,
-    7,
-    8,
-    9,
     10,
-    11,
-    12,
-    13
+    12
    ],
    "revisar": [
     1
@@ -225,18 +208,9 @@
    "slug": "puma-lamelo-mb-02",
    "nombre": "Puma LaMelo MB.02",
    "posiciones": [
-    1,
-    2,
-    3,
     4,
     5,
-    6,
-    7,
-    8,
-    9,
-    10,
-    11,
-    12
+    6
    ],
    "revisar": []
   },
@@ -293,20 +267,11 @@
    "slug": "puma-lamelo-mb-04",
    "nombre": "Puma LaMelo MB.04",
    "posiciones": [
-    1,
-    2,
-    3,
-    4,
-    5,
     6,
     7,
     8,
-    9,
     10,
-    11,
-    12,
-    13,
-    14
+    11
    ],
    "revisar": []
   },
