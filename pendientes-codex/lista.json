@@ -296,11 +296,9 @@
    "slug": "jordan-tatum",
    "nombre": "Jordan Tatum",
    "posiciones": [
-    2,
     3,
     4,
     5,
-    6,
     7,
     8,
     9
@@ -371,8 +369,6 @@
     2,
     3,
     4,
-    5,
-    6,
     7
    ],
    "revisar": []
@@ -469,9 +465,6 @@
    "slug": "jordan-luka-3",
    "nombre": "Jordan Luka 3",
    "posiciones": [
-    2,
-    4,
-    5,
     6
    ],
    "revisar": [
@@ -560,8 +553,6 @@
    "slug": "jordan-luka-2",
    "nombre": "Jordan Luka 2",
    "posiciones": [
-    2,
-    3,
     4
    ],
    "revisar": [
@@ -746,8 +737,7 @@
    "slug": "jordan-zion-4",
    "nombre": "Jordan Zion 4",
    "posiciones": [
-    2,
-    3
+    2
    ],
    "revisar": [
     1
@@ -781,9 +771,7 @@
    "prioridad": 2,
    "slug": "jordan-zion-2",
    "nombre": "Jordan Zion 2",
-   "posiciones": [
-    2
-   ],
+   "posiciones": [],
    "revisar": [
     1
    ]
@@ -843,9 +831,7 @@
    "prioridad": 2,
    "slug": "jordan-zion-3",
    "nombre": "Jordan Zion 3",
-   "posiciones": [
-    2
-   ],
+   "posiciones": [],
    "revisar": [
     1
    ]
