@@ -219,9 +219,7 @@
    "prioridad": 2,
    "slug": "nike-ja-2",
    "nombre": "Nike Ja 2",
-   "posiciones": [
-    8
-   ],
+   "posiciones": [],
    "revisar": [
     1
    ]
@@ -230,9 +228,7 @@
    "prioridad": 2,
    "slug": "nike-giannis-immortality-4",
    "nombre": "Nike Giannis Immortality 4",
-   "posiciones": [
-    3
-   ],
+   "posiciones": [],
    "revisar": [
     1
    ]
@@ -241,20 +237,14 @@
    "prioridad": 2,
    "slug": "puma-lamelo-mb-01",
    "nombre": "Puma LaMelo MB.01",
-   "posiciones": [
-    1,
-    7,
-    8
-   ],
+   "posiciones": [],
    "revisar": []
   },
   {
    "prioridad": 2,
    "slug": "nike-kd-18",
    "nombre": "Nike KD 18",
-   "posiciones": [
-    6
-   ],
+   "posiciones": [],
    "revisar": [
     1
    ]
@@ -264,9 +254,6 @@
    "slug": "jordan-luka-4",
    "nombre": "Jordan Luka 4",
    "posiciones": [
-    1,
-    2,
-    3,
     4,
     7
    ],
