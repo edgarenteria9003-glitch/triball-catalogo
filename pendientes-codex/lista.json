@@ -348,10 +348,7 @@
    "prioridad": 2,
    "slug": "under-armour-curry-1",
    "nombre": "Under Armour Curry 1",
-   "posiciones": [
-    10,
-    12
-   ],
+   "posiciones": [],
    "revisar": []
   },
   {
@@ -367,9 +364,7 @@
    "prioridad": 2,
    "slug": "nike-kyrie-6",
    "nombre": "Nike Kyrie 6",
-   "posiciones": [
-    4
-   ],
+   "posiciones": [],
    "revisar": [
     1
    ]
@@ -378,9 +373,7 @@
    "prioridad": 2,
    "slug": "jordan-luka-2",
    "nombre": "Jordan Luka 2",
-   "posiciones": [
-    4
-   ],
+   "posiciones": [],
    "revisar": [
     1
    ]
@@ -389,9 +382,7 @@
    "prioridad": 2,
    "slug": "nike-sabrina-1",
    "nombre": "Nike Sabrina 1",
-   "posiciones": [
-    3
-   ],
+   "posiciones": [],
    "revisar": [
     1
    ]
@@ -409,9 +400,7 @@
    "prioridad": 2,
    "slug": "adidas-adizero-select-2-0",
    "nombre": "Adidas Adizero Select 2.0",
-   "posiciones": [
-    2
-   ],
+   "posiciones": [],
    "revisar": [
     1
    ]
@@ -420,11 +409,7 @@
    "prioridad": 2,
    "slug": "adidas-ae-1-low",
    "nombre": "Adidas AE 1 Low",
-   "posiciones": [
-    2,
-    3,
-    4
-   ],
+   "posiciones": [],
    "revisar": [
     1
    ]
@@ -433,32 +418,21 @@
    "prioridad": 2,
    "slug": "nike-kobe",
    "nombre": "Nike Kobe",
-   "posiciones": [
-    1,
-    2
-   ],
+   "posiciones": [],
    "revisar": []
   },
   {
    "prioridad": 2,
    "slug": "nike-kyrie-1",
    "nombre": "Nike Kyrie 1",
-   "posiciones": [
-    1
-   ],
+   "posiciones": [],
    "revisar": []
   },
   {
    "prioridad": 2,
    "slug": "puma-lamelo-mb-05",
    "nombre": "Puma LaMelo MB.05",
-   "posiciones": [
-    2,
-    3,
-    5,
-    6,
-    7
-   ],
+   "posiciones": [],
    "revisar": []
   },
   {
@@ -513,9 +487,7 @@
    "prioridad": 2,
    "slug": "nike-gt-cut-3-turbo",
    "nombre": "Nike GT Cut 3 Turbo",
-   "posiciones": [
-    2
-   ],
+   "posiciones": [],
    "revisar": [
     1
    ]
@@ -524,10 +496,7 @@
    "prioridad": 2,
    "slug": "nike-kobe-9",
    "nombre": "Nike Kobe 9",
-   "posiciones": [
-    2,
-    3
-   ],
+   "posiciones": [],
    "revisar": [
     1
    ]
@@ -536,18 +505,14 @@
    "prioridad": 2,
    "slug": "puma-all-pro-nitro",
    "nombre": "Puma All-Pro Nitro",
-   "posiciones": [
-    3
-   ],
+   "posiciones": [],
    "revisar": []
   },
   {
    "prioridad": 2,
    "slug": "jordan-zion-4",
    "nombre": "Jordan Zion 4",
-   "posiciones": [
-    2
-   ],
+   "posiciones": [],
    "revisar": [
     1
    ]
@@ -556,9 +521,7 @@
    "prioridad": 2,
    "slug": "nike-giannis-freak-7",
    "nombre": "Nike Giannis Freak 7",
-   "posiciones": [
-    2
-   ],
+   "posiciones": [],
    "revisar": [
     1,
     3,
@@ -569,9 +532,7 @@
    "prioridad": 2,
    "slug": "asics-nova-surge-3",
    "nombre": "Asics Nova Surge 3",
-   "posiciones": [
-    2
-   ],
+   "posiciones": [],
    "revisar": [
     1
    ]
@@ -589,9 +550,7 @@
    "prioridad": 2,
    "slug": "nike-pg-2-playstation",
    "nombre": "Nike PG 2 PlayStation",
-   "posiciones": [
-    2
-   ],
+   "posiciones": [],
    "revisar": [
     1
    ]
