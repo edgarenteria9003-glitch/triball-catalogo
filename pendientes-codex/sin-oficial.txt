@@ -12,3 +12,29 @@ nike-ja-3
   15  par rosado + amarillo estilo Bob Esponja: no existe oficial
   18  turquesa con swoosh morado/naranja: base "Twelve Time", pero el oficial trae swoosh rojo
   19  negro con swoosh blanco: no hay Ja 3 negro liso oficial
+
+Revisión 2026-10-30 (tarde): posiciones sin foto oficial igual, se deja la foto real.
+  nike-kobe-5: 4 5 8 9 11 12 15 sin coincidencia (varias fotos parecen de otro modelo Kobe)
+  nike-ja-2: 2 3 6 7 8 sin coincidencia (pares de colores distintos o sin oficial igual)
+  nike-hyperdunk: 1 2 3 4 7 8 sin coincidencia oficial segura
+  adidas-ae-1-low: 2 3 4 sin coincidencia (2 blanco/gris y 3 morado tornasol no existen; 4 cuello serpiente distinto)
+  adidas-harden-vol-8: 2 7 pares de colores distintos (mismatch), no hay oficial
+  adidas-harden-vol-9: 2 negro total sin oficial
+  adidas-adizero-select-2-0: 2 multicolor tie-dye sin oficial
+  jordan-tatum: 3 4 5 7 8 9 sin oficial (pares mezclados o colores no oficiales)
+  jordan-luka-4: 1 2 3 4 7 sin oficial
+  jordan-luka-3: 6 sin oficial
+  jordan-luka-2: 4 sin oficial
+  jordan-zion-4: 2 sin oficial
+  puma-lamelo-mb-01: 1 morado con suela gris sin oficial igual; 7 8 pares mezclados sin oficial
+  puma-lamelo-mb-03: 1 4 5 6 7 8 11 sin oficial igual (diseños/colores no oficiales)
+  puma-lamelo-mb-05: 2 3 5 6 7 sin oficial igual
+  puma-all-pro-nitro: 3 negro oscuro sin oficial claro
+  under-armour-curry-1: 2 9 10 12 sin oficial igual
+  under-armour-curry-3: 1 3 4 6 sin oficial igual
+  under-armour-curry-4: 1 4 versión retro (suela/logo distintos), sin oficial igual en GOAT
+  under-armour-curry-12: 2 3 4 la búsqueda no dio Curry 12 oficiales; falta buscar de nuevo
+  asics-sky-elite-ff-2: 2 3 son versión MT (bota), GOAT solo trae low en esos colores
+  asics-nova-surge-3: 2 verde limón sin oficial
+  on-on-indoor: 2 3 4 5 GOAT no trae ese modelo de On
+  reebok-angel-1: 1 2 silueta distinta a los Reese 1 de GOAT, sin oficial

@@ -1226,11 +1226,7 @@
     2,
     3,
     4,
-    5,
-    6,
-    7,
-    8,
-    9
+    5
    ],
    "revisar": []
   },
@@ -1266,10 +1262,7 @@
    "prioridad": 3,
    "slug": "x-kobe-ni-os",
    "nombre": "Kobe niños",
-   "posiciones": [
-    1,
-    2
-   ],
+   "posiciones": [],
    "revisar": []
   },
   {
