@@ -1,0 +1,74 @@
+{
+ "fotos": [
+  {
+   "slug": "nike-kyrie-5",
+   "modelo": "Nike Kyrie 5",
+   "color": 17,
+   "motivo": "Es un Kyrie 4 (otro modelo), no un Kyrie 5",
+   "archivo": "ocultos/nike-kyrie-5-color-17.png",
+   "precio": null
+  },
+  {
+   "slug": "nike-kd-12",
+   "modelo": "Nike KD 12",
+   "color": 1,
+   "motivo": "Es un KD Trey 5 (tiene el disco en el talón), no un KD 12",
+   "archivo": "ocultos/nike-kd-12-color-01.png",
+   "precio": 250000
+  },
+  {
+   "slug": "jordan-jordan-varios",
+   "modelo": "Jordan Jordan (varios)",
+   "color": 3,
+   "motivo": "Diseño genérico sin logo: no corresponde a un Jordan real",
+   "archivo": "ocultos/jordan-jordan-varios-color-03.png",
+   "precio": null
+  },
+  {
+   "slug": "jordan-jordan-varios",
+   "modelo": "Jordan Jordan (varios)",
+   "color": 4,
+   "motivo": "Diseño genérico sin logo: no corresponde a un Jordan real",
+   "archivo": "ocultos/jordan-jordan-varios-color-04.png",
+   "precio": null
+  },
+  {
+   "slug": "nike-lebron-witness-5",
+   "modelo": "Nike LeBron Witness 5",
+   "color": 2,
+   "motivo": "Foto recortada: no se ve el tenis completo",
+   "archivo": "ocultos/nike-lebron-witness-5-color-02.png",
+   "precio": 260000
+  },
+  {
+   "slug": "under-armour-curry-12",
+   "modelo": "Under Armour Curry 12",
+   "color": 4,
+   "motivo": "Foto recortada: no se ve el tenis completo",
+   "archivo": "ocultos/under-armour-curry-12-color-04.png",
+   "precio": 270000
+  },
+  {
+   "slug": "nike-lebron-22",
+   "modelo": "Nike LeBron 22",
+   "color": 2,
+   "motivo": "Foto recortada: no se ve el tenis completo",
+   "archivo": "ocultos/nike-lebron-22-color-02.png",
+   "precio": 260000
+  }
+ ],
+ "modelos_ocultos": [
+  {
+   "d": "b",
+   "marca": "Nike",
+   "modelo": "KD 12",
+   "slug": "nike-kd-12",
+   "pmin": 250000,
+   "pmax": 250000,
+   "dama": false,
+   "hombre": true,
+   "n": 0,
+   "cut": 1
+  }
+ ]
+}
