@@ -10,6 +10,9 @@
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}.sheet-note{margin:0;padding:10px max(16px,env(safe-area-inset-right,0px)) 10px max(16px,env(safe-area-inset-left,0px));background:var(--mist);color:var(--muted);font-size:.86rem;line-height:1.4}
 .sheet-note a{color:var(--ink);font-weight:700;white-space:nowrap}
 .cart-wa{display:inline-grid;place-items:center;width:34px;height:34px;margin-left:8px;border-radius:999px;background:#25D366;color:#fff}.cart-wa svg{width:18px;height:18px;fill:currentColor}
+#q-all{margin-top:22px}#q-all .q-all-h{font-size:1.15rem;margin:0 0 12px;display:flex;flex-wrap:wrap;align-items:baseline;gap:8px}#q-all .q-all-h small{font-size:.85rem;color:var(--muted);font-weight:500}
+.ibtn.ibtn-s{display:inline-grid!important;place-items:center}.ibtn-s svg{fill:none;stroke:currentColor;stroke-width:2}
+.finder.noshoe #sport,.finder.noshoe .frow{display:none}
 </style>
 <title>Catálogo TRIBALL</title>
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -358,6 +361,7 @@ section[id]{scroll-margin-top:118px}
       <a href="#top10">Más pedidos</a><a href="#tenis">Tenis</a><a href="#balones">Balones</a><a href="#proteccion">Protección</a><a href="#equipos">Equipos</a><a href="#mayor">Al por mayor</a><a href="#comprar">Cómo comprar</a>
     </nav>
     <div class="top-r">
+      <button class="ibtn ibtn-s" id="go-search" type="button" aria-label="Buscar en toda la tienda"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></button>
       <button class="ibtn" id="menu" type="button" aria-label="Menú" aria-expanded="false"><svg viewBox="0 0 24 24"><path d="M4 9h16M4 15h16"/></svg></button>
       <a class="btn" id="cta-top" target="_blank" rel="noopener"><svg class="wa-ico"><use href="#wa"/></svg>Pedir</a>
     </div>
@@ -406,12 +410,13 @@ section[id]{scroll-margin-top:118px}
 <!-- Catálogo de tenis -->
 <section class="band" id="tenis" aria-labelledby="h-tenis">
   <div class="wrap">
-    <div class="sec-h"><h2 class="disp h2" id="h-tenis">Encuentra<br>tu par</h2><p>Filtra por deporte, marca, talla o presupuesto.</p></div>
+    <div class="sec-h"><h2 class="disp h2" id="h-tenis">Encuentra<br>tu par</h2><p>Busca cualquier producto de la tienda o filtra los tenis por deporte, marca, talla o presupuesto.</p></div>
     <div class="finder">
-      <label class="search" for="q"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input id="q" type="search" placeholder="Busca: Kobe, Kyrie, Curry, Sabrina…" autocomplete="off"></label>
+      <label class="search" for="q"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input id="q" type="search" placeholder="Busca lo que quieras: Kobe, NFL, rodilleras, medias…" autocomplete="off"></label>
       <div class="seg" id="sport" role="group" aria-label="Deporte"></div>
       <div class="frow"><div class="chips" id="brands" aria-label="Marca"></div><div class="chips" id="sizes" aria-label="Talla"></div><div class="chips" id="budget" aria-label="Presupuesto"></div></div>
     </div>
+    <div id="q-all" hidden></div>
     <div class="meta"><span id="count"></span><button type="button" id="clear" hidden>Quitar filtros</button></div>
     <div id="shoes"></div>
   </div>
@@ -598,7 +603,7 @@ const PHOTO = {};
 async function loadPhoto(el){
   const slug = el.dataset.lazy; if (!slug || el.dataset.req) return; el.dataset.req = 1;
   try {
-    if (!PHOTO[slug]) PHOTO[slug] = fetch("c/"+slug+".json?v=20261030.1").then(r => { if(!r.ok) throw 0; return r.json(); });
+    if (!PHOTO[slug]) PHOTO[slug] = fetch("c/"+slug+".json?v=20261030.2").then(r => { if(!r.ok) throw 0; return r.json(); });
     const d = await PHOTO[slug];
     el.onload = () => el.classList.add("ld"); el.src = d.img;
   } catch(e) { el.classList.add("ld","fail"); }
@@ -745,8 +750,20 @@ hydrate($("#rail"));
 /* ---------- catálogo ---------- */
 const BUDGETS = [["a","Hasta $250.000",p => p<=250000],["b","$250.000 a $300.000",p => p>250000 && p<=300000],["c","Más de $300.000",p => p>300000]];
 const st = {sport:"b", brand:"Todas", fam:null, size:null, budget:null, q:"", bal:"balones-b", gear:"rodilleras"};
-const matchShoe = t => norm(t.marca+" "+t.modelo).includes(st.q);
-const matchProd = p => norm(p.nombre+" "+(p.detalle||"")+" "+(CAT_LABEL[p.cat]||"")).includes(st.q);
+/* Busca por palabras sueltas, sin tildes y sin importar singular o plural ("rodilleras" encuentra "Rodillera"). */
+const SYN = {bolsos:"bolso maleta maletin morral mochila", mas:"nfl camiseta jersey", medias:"media calcetin", balacas:"balaca muñequera", compresivo:"compresion licra", "balones-b":"balon baloncesto basket", "balones-v":"balon voleibol voley", ropa:"uniforme camiseta ropa", otros:"accesorio"};
+const qWords = () => st.q.split(/\s+/).filter(Boolean).map(w => w.length > 4 ? w.replace(/(es|s)$/,"") : w);
+const hit = text => { const t = " "+norm(text).replace(/[^a-z0-9ñ]+/g," "); return qWords().every(w => t.includes(" "+w)); };
+const matchShoe = t => hit(t.marca+" "+t.modelo+" tenis zapatillas "+(t.d==="v"?"voleibol voley":"basket"));
+const matchProd = p => hit(p.nombre+" "+(p.detalle||"")+" "+(CAT_LABEL[p.cat]||"")+" "+(SYN[p.cat]||"")+" "+p.slug.replace(/-/g," "));
+function drawSearchAll(){
+  const box = $("#q-all");
+  if (!st.q) { box.hidden = true; box.innerHTML = ""; return; }
+  const rows = PRODUCTOS.filter(p => p.cat !== "ninos" && matchProd(p));
+  box.hidden = !rows.length;
+  box.innerHTML = rows.length ? `<h3 class="q-all-h">En toda la tienda <small>${rows.length} ${rows.length===1?"producto":"productos"} para «${esc($("#q").value.trim())}»</small></h3><div class="grid">${rows.map(prodCard).join("")}</div>` : "";
+  hydrate(box);
+}
 const inBudget = t => !st.budget || (t.pmin && BUDGETS.find(b => b[0]===st.budget)[2](t.pmin));
 
 function drawShoes(){
@@ -756,6 +773,7 @@ function drawShoes(){
     v: TENIS.filter(t => t.d==="v" && (!q||matchShoe(t))).length,
     n: KIDS.filter(p => !q||matchProd(p)).length
   };
+  document.querySelector(".finder").classList.toggle("noshoe", !!q && !counts.b && !counts.v && !counts.n);
   if (q && !counts[st.sport]) { const alt = ["b","v","n"].find(k => counts[k]); if (alt) { st.sport = alt; st.brand = "Todas"; st.fam = null; } }
   const labels = {b:"Baloncesto", v:"Voleibol", n:"Niños"};
   $("#sport").innerHTML = ["b","v","n"].map(k => `<button type="button" data-sport="${k}" aria-pressed="${st.sport===k}">${labels[k]}<small>${counts[k]}</small></button>`).join("");
@@ -777,9 +795,9 @@ function drawShoes(){
     (st.brand!=="Todas" && fams.length>=4 ? '<span class="k" style="margin-left:8px">Línea</span>' + ["Todas",...fams].map(f => `<button class="chip" type="button" data-f="${esc(f)}" aria-pressed="${(st.fam||"Todas")===f}">${esc(f)}</button>`).join("") : "");
   $("#budget").innerHTML = '<span class="k">Precio</span>' + BUDGETS.map(([k,t]) => `<button class="chip" type="button" data-p="${k}" aria-pressed="${st.budget===k}">${t}</button>`).join("");
   const rows = pool.filter(t => (st.brand==="Todas"||t.marca===st.brand) && (!st.fam||fam(t)===st.fam) && (!st.size||t[st.size]) && inBudget(t) && (!q||matchShoe(t)));
-  $("#count").textContent = rows.length + (rows.length===1?" modelo":" modelos") + (q ? ` para «${$("#q").value.trim()}»` : "");
+  $("#count").textContent = (q && !rows.length && !$("#q-all").hidden) ? "Ningún tenis con esa palabra" : rows.length + (rows.length===1?" modelo":" modelos") + (q ? ` para «${$("#q").value.trim()}»` : "");
   const groups = [...new Set(rows.map(r => r.marca))];
-  $("#shoes").innerHTML = rows.length ? groups.map(g => { const r = rows.filter(x => x.marca===g); return `<div class="group"><h3>${esc(g)}<small>${r.length} ${r.length===1?"modelo":"modelos"}</small></h3><div class="grid">${r.map(t => shoeCard(t)).join("")}</div></div>`; }).join("") : emptyMsg(q);
+  $("#shoes").innerHTML = rows.length ? groups.map(g => { const r = rows.filter(x => x.marca===g); return `<div class="group"><h3>${esc(g)}<small>${r.length} ${r.length===1?"modelo":"modelos"}</small></h3><div class="grid">${r.map(t => shoeCard(t)).join("")}</div></div>`; }).join("") : (q && !$("#q-all").hidden ? "" : emptyMsg(q));
 }
 function drawBalones(){
   const q = st.q;
@@ -808,7 +826,8 @@ function drawTeam(){
   $("#team-grid").innerHTML = ropa.map(prodCard).join("");
   $("#mas-grid").innerHTML = mas.map(prodCard).join("");
 }
-function drawAll(){ drawShoes(); drawBalones(); drawGear(); drawTeam(); }
+$("#go-search").addEventListener("click", () => { $("#q").scrollIntoView({behavior:"smooth", block:"center"}); setTimeout(() => $("#q").focus({preventScroll:true}), 450); });
+function drawAll(){ drawSearchAll(); drawShoes(); drawBalones(); drawGear(); drawTeam(); }
 
 /* Tras cada render, carga fotos y anima las tarjetas nuevas. */
 [["drawShoes","#shoes"],["drawBalones","#bal-grid"],["drawGear","#proteccion"],["drawTeam","#equipos"]].forEach(([fn,sel]) => { const f = window[fn]; window[fn] = (...a) => { const r = f(...a); hydrate($(sel)); return r; }; });
@@ -850,7 +869,7 @@ async function openSheet(slug, btn){
   $("#sheet-g").innerHTML = '<div class="empty" style="grid-column:1/-1">Cargando fotos…</div>';
   $("#sheet").hidden = false; document.body.style.overflow = "hidden"; $("#sheet-x").focus();
   try {
-    if (!cache[slug]) { const r = await fetch("m/"+slug+".json?v=20261030.1"); if(!r.ok) throw 0; cache[slug] = await r.json(); }
+    if (!cache[slug]) { const r = await fetch("m/"+slug+".json?v=20261030.2"); if(!r.ok) throw 0; cache[slug] = await r.json(); }
     $("#sheet-g").innerHTML = cache[slug].map((c,i) => `<article class="card">
       <div class="tile">${img(c.img, name+", "+(shoe?"color ":"foto ")+(i+1))}<span class="tag">#${i+1}</span></div>
       <div class="ct"><div class="buy"><div>${c.p?`<span class="pr">${fmt(c.p)}</span>`:`<span class="pr ask">Consulta el precio</span>`}<small>${shoe?"Color":"Foto"} #${i+1}</small></div>
