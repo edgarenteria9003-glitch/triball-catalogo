@@ -52,31 +52,21 @@
    "prioridad": 1,
    "slug": "asics-sky-elite-ff-3",
    "nombre": "Asics Sky Elite FF 3",
-   "posiciones": [
-    9,
-    10
-   ],
+   "posiciones": [],
    "revisar": []
   },
   {
    "prioridad": 1,
    "slug": "nike-hyperset",
    "nombre": "Nike Hyperset",
-   "posiciones": [
-    6,
-    7,
-    8,
-    9
-   ],
+   "posiciones": [],
    "revisar": []
   },
   {
    "prioridad": 1,
    "slug": "asics-metarise",
    "nombre": "Asics Metarise",
-   "posiciones": [
-    6
-   ],
+   "posiciones": [],
    "revisar": []
   },
   {
@@ -90,9 +80,7 @@
    "prioridad": 1,
    "slug": "mizuno-wave-momentum",
    "nombre": "Mizuno Wave Momentum",
-   "posiciones": [
-    2
-   ],
+   "posiciones": [],
    "revisar": []
   },
   {
