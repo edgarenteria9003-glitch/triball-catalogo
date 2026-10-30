@@ -543,11 +543,7 @@
    "prioridad": 2,
    "slug": "under-armour-curry-12",
    "nombre": "Under Armour Curry 12",
-   "posiciones": [
-    2,
-    3,
-    4
-   ],
+   "posiciones": [],
    "revisar": [
     1
    ]
@@ -631,10 +627,7 @@
    "prioridad": 2,
    "slug": "asics-sky-elite-ff-2",
    "nombre": "Asics Sky Elite FF 2",
-   "posiciones": [
-    2,
-    3
-   ],
+   "posiciones": [],
    "revisar": [
     1
    ]
@@ -1131,10 +1124,7 @@
    "prioridad": 2,
    "slug": "reebok-angel-1",
    "nombre": "Reebok Angel 1",
-   "posiciones": [
-    1,
-    2
-   ],
+   "posiciones": [],
    "revisar": []
   },
   {
