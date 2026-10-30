@@ -38,3 +38,10 @@ Revisión 2026-10-30 (tarde): posiciones sin foto oficial igual, se deja la foto
   asics-nova-surge-3: 2 verde limón sin oficial
   on-on-indoor: 2 3 4 5 GOAT no trae ese modelo de On
   reebok-angel-1: 1 2 silueta distinta a los Reese 1 de GOAT, sin oficial
+  x-jordan-retro-ni-os: 1-13 silueta tipo Jordan 13 sin oficial igual (el Jumpman Pro oficial es otra silueta)
+  x-kyrie-7-ni-os: 3 5 8 sin oficial igual (beige/turquesa, negro/rojo y negro multicolor)
+  x-kd-trey-5-ni-os: 1 2 sin oficial igual (colores de la versión niño no coinciden)
+  x-jordan-ni-os (6 Rings): 3 4 5 sin oficial igual
+  under-armour-curry-12: 2 3 4 GOAT no tiene Curry 12; buscar en underarmour.com
+  asics-y-mizuno-m-s-referencias: 102 fotos de tienda con modelos mezclados (Rocket, Netburner, Sky Elite,
+    Metarise, Wave Lightning, Stealth) y varias réplicas; hay que separar por modelo antes de buscar oficiales.
