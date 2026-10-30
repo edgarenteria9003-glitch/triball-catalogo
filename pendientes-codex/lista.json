@@ -91,10 +91,7 @@
    "prioridad": 2,
    "slug": "nike-kyrie-3",
    "nombre": "Nike Kyrie 3",
-   "posiciones": [
-    23,
-    26
-   ],
+   "posiciones": [],
    "revisar": [
     1,
     27
@@ -104,13 +101,7 @@
    "prioridad": 2,
    "slug": "nike-kyrie-5",
    "nombre": "Nike Kyrie 5",
-   "posiciones": [
-    2,
-    3,
-    9,
-    12,
-    14
-   ],
+   "posiciones": [],
    "revisar": [
     1,
     17
@@ -120,13 +111,7 @@
    "prioridad": 2,
    "slug": "adidas-ae-1",
    "nombre": "Adidas AE 1",
-   "posiciones": [
-    2,
-    3,
-    6,
-    7,
-    8
-   ],
+   "posiciones": [],
    "revisar": [
     1,
     16,
@@ -138,13 +123,7 @@
    "prioridad": 2,
    "slug": "nike-kyrie-4",
    "nombre": "Nike Kyrie 4",
-   "posiciones": [
-    8,
-    9,
-    11,
-    12,
-    13
-   ],
+   "posiciones": [],
    "revisar": [
     1,
     16
@@ -154,22 +133,14 @@
    "prioridad": 2,
    "slug": "nike-hyperset-2",
    "nombre": "Nike Hyperset 2",
-   "posiciones": [
-    4,
-    8
-   ],
+   "posiciones": [],
    "revisar": []
   },
   {
    "prioridad": 2,
    "slug": "adidas-ae-2",
    "nombre": "Adidas AE 2",
-   "posiciones": [
-    5,
-    6,
-    10,
-    12
-   ],
+   "posiciones": [],
    "revisar": [
     1
    ]
@@ -178,23 +149,14 @@
    "prioridad": 2,
    "slug": "nike-kd-17",
    "nombre": "Nike KD 17",
-   "posiciones": [
-    3,
-    5,
-    7,
-    8
-   ],
+   "posiciones": [],
    "revisar": []
   },
   {
    "prioridad": 2,
    "slug": "puma-lamelo-mb-02",
    "nombre": "Puma LaMelo MB.02",
-   "posiciones": [
-    4,
-    5,
-    6
-   ],
+   "posiciones": [],
    "revisar": []
   },
   {
