@@ -428,14 +428,7 @@
    "prioridad": 2,
    "slug": "under-armour-curry-2",
    "nombre": "Under Armour Curry 2",
-   "posiciones": [
-    1,
-    2,
-    3,
-    4,
-    5,
-    6
-   ],
+   "posiciones": [],
    "revisar": []
   },
   {
@@ -497,17 +490,9 @@
    "slug": "under-armour-curry-1",
    "nombre": "Under Armour Curry 1",
    "posiciones": [
-    1,
     2,
-    3,
-    4,
-    5,
-    6,
-    7,
-    8,
     9,
     10,
-    11,
     12
    ],
    "revisar": []
@@ -912,8 +897,6 @@
    "nombre": "Under Armour Curry 4",
    "posiciones": [
     1,
-    2,
-    3,
     4
    ],
    "revisar": []
@@ -1169,12 +1152,9 @@
    "nombre": "Under Armour Curry 3",
    "posiciones": [
     1,
-    2,
     3,
     4,
-    5,
-    6,
-    7
+    6
    ],
    "revisar": []
   },
