@@ -339,11 +339,6 @@
    "nombre": "Puma LaMelo MB.01",
    "posiciones": [
     1,
-    2,
-    3,
-    4,
-    5,
-    6,
     7,
     8
    ],
@@ -392,10 +387,6 @@
    "nombre": "Adidas Harden Vol. 8",
    "posiciones": [
     2,
-    3,
-    4,
-    5,
-    6,
     7
    ],
    "revisar": [
@@ -424,15 +415,11 @@
    "nombre": "Puma LaMelo MB.03",
    "posiciones": [
     1,
-    2,
-    3,
     4,
     5,
     6,
     7,
     8,
-    9,
-    10,
     11
    ],
    "revisar": []
@@ -477,10 +464,7 @@
    "slug": "adidas-harden-vol-9",
    "nombre": "Adidas Harden Vol. 9",
    "posiciones": [
-    2,
-    3,
-    4,
-    5
+    2
    ],
    "revisar": [
     1,
@@ -588,9 +572,7 @@
    "slug": "adidas-adizero-select-2-0",
    "nombre": "Adidas Adizero Select 2.0",
    "posiciones": [
-    2,
-    3,
-    4
+    2
    ],
    "revisar": [
     1
@@ -633,14 +615,11 @@
    "slug": "puma-lamelo-mb-05",
    "nombre": "Puma LaMelo MB.05",
    "posiciones": [
-    1,
     2,
     3,
-    4,
     5,
     6,
-    7,
-    8
+    7
    ],
    "revisar": []
   },
@@ -690,10 +669,7 @@
    "prioridad": 2,
    "slug": "adidas-dame-9",
    "nombre": "Adidas Dame 9",
-   "posiciones": [
-    2,
-    3
-   ],
+   "posiciones": [],
    "revisar": [
     1
    ]
@@ -726,8 +702,6 @@
    "slug": "puma-all-pro-nitro",
    "nombre": "Puma All-Pro Nitro",
    "posiciones": [
-    1,
-    2,
     3
    ],
    "revisar": []
@@ -820,9 +794,7 @@
    "prioridad": 2,
    "slug": "puma-scoot-zeros",
    "nombre": "Puma Scoot Zeros",
-   "posiciones": [
-    2
-   ],
+   "posiciones": [],
    "revisar": [
     1
    ]
