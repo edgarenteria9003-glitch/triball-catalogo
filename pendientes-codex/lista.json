@@ -559,9 +559,7 @@
    "prioridad": 2,
    "slug": "nike-kobe-x-ray",
    "nombre": "Nike Kobe X-Ray",
-   "posiciones": [
-    2
-   ],
+   "posiciones": [],
    "revisar": [
     1
    ]
@@ -579,9 +577,7 @@
    "prioridad": 2,
    "slug": "nike-precision-6",
    "nombre": "Nike Precision 6",
-   "posiciones": [
-    1
-   ],
+   "posiciones": [],
    "revisar": []
   },
   {
@@ -606,12 +602,7 @@
    "prioridad": 2,
    "slug": "on-on-indoor",
    "nombre": "On On indoor",
-   "posiciones": [
-    2,
-    3,
-    4,
-    5
-   ],
+   "posiciones": [],
    "revisar": [
     1
    ]
@@ -704,10 +695,7 @@
    "prioridad": 2,
    "slug": "under-armour-curry-4",
    "nombre": "Under Armour Curry 4",
-   "posiciones": [
-    1,
-    4
-   ],
+   "posiciones": [],
    "revisar": []
   },
   {
@@ -909,9 +897,7 @@
    "prioridad": 2,
    "slug": "puma-puma-varios",
    "nombre": "Puma Puma (varios)",
-   "posiciones": [
-    1
-   ],
+   "posiciones": [],
    "revisar": []
   },
   {
@@ -956,12 +942,7 @@
    "prioridad": 2,
    "slug": "under-armour-curry-3",
    "nombre": "Under Armour Curry 3",
-   "posiciones": [
-    1,
-    3,
-    4,
-    6
-   ],
+   "posiciones": [],
    "revisar": []
   },
   {
@@ -1007,17 +988,6 @@
    "slug": "x-jordan-retro-ni-os",
    "nombre": "Jordan Retro niños",
    "posiciones": [
-    1,
-    2,
-    3,
-    4,
-    5,
-    6,
-    7,
-    8,
-    9,
-    10,
-    11,
     12,
     13
    ],
