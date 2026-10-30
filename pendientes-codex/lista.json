@@ -26,12 +26,7 @@
    "prioridad": 1,
    "slug": "nike-ja-3",
    "nombre": "Nike Ja 3",
-   "posiciones": [
-    7,
-    15,
-    18,
-    19
-   ],
+   "posiciones": [],
    "revisar": [],
    "nota": "Sin foto oficial (réplica o color inventado): se deja la foto real. Ver pendientes-codex/sin-oficial.txt"
   },
@@ -39,12 +34,7 @@
    "prioridad": 1,
    "slug": "nike-kyrie-7",
    "nombre": "Nike Kyrie 7",
-   "posiciones": [
-    3,
-    7,
-    13,
-    20
-   ],
+   "posiciones": [],
    "revisar": [],
    "nota": "Sin foto oficial (réplica o color inventado): se deja la foto real. Ver pendientes-codex/sin-oficial.txt"
   },
@@ -102,13 +92,6 @@
    "slug": "nike-kyrie-3",
    "nombre": "Nike Kyrie 3",
    "posiciones": [
-    4,
-    6,
-    15,
-    16,
-    18,
-    21,
-    22,
     23,
     26
    ],
