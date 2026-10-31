@@ -987,42 +987,28 @@
    "prioridad": 3,
    "slug": "x-jordan-retro-ni-os",
    "nombre": "Jordan Retro niños",
-   "posiciones": [
-    12,
-    13
-   ],
+   "posiciones": [],
    "revisar": []
   },
   {
    "prioridad": 3,
    "slug": "x-jordan-ni-os",
    "nombre": "Jordan niños",
-   "posiciones": [
-    3,
-    4,
-    5
-   ],
+   "posiciones": [],
    "revisar": []
   },
   {
    "prioridad": 3,
    "slug": "x-kyrie-7-ni-os",
    "nombre": "Kyrie 7 niños",
-   "posiciones": [
-    3,
-    5,
-    8
-   ],
+   "posiciones": [],
    "revisar": []
   },
   {
    "prioridad": 3,
    "slug": "x-kd-trey-5-ni-os",
    "nombre": "KD Trey 5 niños",
-   "posiciones": [
-    1,
-    2
-   ],
+   "posiciones": [],
    "revisar": []
   },
   {
@@ -1036,10 +1022,7 @@
    "prioridad": 3,
    "slug": "x-nike-ni-os-con-velcro",
    "nombre": "Nike niños con velcro",
-   "posiciones": [
-    1,
-    2
-   ],
+   "posiciones": [],
    "revisar": []
   },
   {
@@ -1047,11 +1030,6 @@
    "slug": "asics-y-mizuno-m-s-referencias",
    "nombre": "Asics y Mizuno Más referencias",
    "posiciones": [
-    3,
-    4,
-    5,
-    9,
-    11,
     12,
     14,
     15,
