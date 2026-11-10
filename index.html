@@ -658,7 +658,7 @@ function hydrate(root){
 }
 
 /* ---------- datos ---------- */
-const BRAND_ORDER = ["Nike","Jordan","Adidas","Puma","Under Armour","Reebok","Asics","Mizuno","On","Asics y Mizuno"];
+const BRAND_ORDER = ["Nike","Jordan","Adidas","Puma","Under Armour","Reebok","Asics y Mizuno","Asics","Mizuno","On"];
 const nat = (a,b) => a.localeCompare(b,"es",{numeric:true});
 TENIS.sort((a,b) => (BRAND_ORDER.indexOf(a.marca)-BRAND_ORDER.indexOf(b.marca)) || nat(a.modelo,b.modelo));
 const BY_SLUG = Object.fromEntries([...TENIS, ...PRODUCTOS].map(x => [x.slug, x]));
