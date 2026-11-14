@@ -686,7 +686,7 @@ const fmt = n => "$" + n.toLocaleString("es-CO");
 const wa = t => "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(t);
 /* Enlace con vista previa: WhatsApp muestra la foto, nombre y precio del producto. */
 const SITE = "https://edgarenteria9003-glitch.github.io/triball-catalogo/";
-const share = id => "\n" + SITE + "p/" + id + ".html";
+const share = id => "\n" + SITE + "p/" + id + ".html?f=2";
 const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const norm = s => String(s).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"");
 const WA_SVG = '<svg class="wa-ico" aria-hidden="true"><use href="#wa"/></svg>';
@@ -785,7 +785,7 @@ function renderCart() {
   $("#cart-total").textContent = total ? fmt(total) : "Por confirmar";
   const lines = cart.map(item => {
     const product = BY_SLUG[item.slug], extra = rowExtra(item);
-    return "- " + rowName(item) + " × " + item.qty + (product.pmin ? " (" + fmt(product.pmin * item.qty) + ")" : " (precio por confirmar)") + (extra ? "\n  " + extra.charAt(0).toUpperCase() + extra.slice(1) : "") + "\n  Foto: " + SITE + "p/" + rowPhoto(item) + ".html";
+    return "- " + rowName(item) + " × " + item.qty + (product.pmin ? " (" + fmt(product.pmin * item.qty) + ")" : " (precio por confirmar)") + (extra ? "\n  " + extra.charAt(0).toUpperCase() + extra.slice(1) : "") + "\n  Foto: " + SITE + "p/" + rowPhoto(item) + ".html?f=2";
   });
   $("#cart-send").href = wa("Hola TRIBALL, quiero pedir:\n" + (lines.length ? lines.join("\n") : "- (agregar productos)") + (total ? "\nTotal estimado: " + fmt(total) : "") + "\nConfírmame disponibilidad.");
 }
