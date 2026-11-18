@@ -78,6 +78,9 @@
 .trend-it{padding:12px 12px 16px;border-radius:24px}
 .trend-it b{font-size:1.08rem}.trend-it small{font-size:.9rem}
 @media (min-width:760px){.trend-row{grid-template-columns:repeat(4,1fr)!important;gap:18px}.trend-it b{font-size:1.25rem}.trend-it small{font-size:1rem}}
+.wa-tip{position:fixed;left:50%;bottom:calc(96px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);opacity:0;pointer-events:none;z-index:200;background:#0E0E0F;color:#fff;border-radius:18px;padding:12px 16px;width:min(92vw,380px);display:grid;gap:3px;box-shadow:0 10px 30px rgba(0,0,0,.3);transition:opacity .25s,transform .25s}
+.wa-tip.on{opacity:1;transform:translate(-50%,0)}
+.wa-tip b{font-size:.95rem}.wa-tip span{font-size:.85rem;opacity:.85}
 </style>
 <title>Catálogo TRIBALL</title>
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -686,7 +689,7 @@ const fmt = n => "$" + n.toLocaleString("es-CO");
 const wa = t => "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(t);
 /* Enlace con vista previa: WhatsApp muestra la foto, nombre y precio del producto. */
 const SITE = "https://edgarenteria9003-glitch.github.io/triball-catalogo/";
-const share = id => "\n" + SITE + "p/" + id + ".html?f=2";
+const share = id => "\n" + SITE + "p/" + id + ".html?f=3";
 const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const norm = s => String(s).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"");
 const WA_SVG = '<svg class="wa-ico" aria-hidden="true"><use href="#wa"/></svg>';
@@ -697,7 +700,7 @@ const PHOTO = {};
 async function loadPhoto(el){
   const slug = el.dataset.lazy; if (!slug || el.dataset.req) return; el.dataset.req = 1;
   try {
-    if (!PHOTO[slug]) PHOTO[slug] = fetch("c/"+slug+".json?v=20261115.3").then(r => { if(!r.ok) throw 0; return r.json(); });
+    if (!PHOTO[slug]) PHOTO[slug] = fetch("c/"+slug+".json?v=20261118.1").then(r => { if(!r.ok) throw 0; return r.json(); });
     const d = await PHOTO[slug];
     el.onload = () => el.classList.add("ld"); el.src = d.img;
   } catch(e) { el.classList.add("ld","fail"); }
@@ -785,7 +788,7 @@ function renderCart() {
   $("#cart-total").textContent = total ? fmt(total) : "Por confirmar";
   const lines = cart.map(item => {
     const product = BY_SLUG[item.slug], extra = rowExtra(item);
-    return "- " + rowName(item) + " × " + item.qty + (product.pmin ? " (" + fmt(product.pmin * item.qty) + ")" : " (precio por confirmar)") + (extra ? "\n  " + extra.charAt(0).toUpperCase() + extra.slice(1) : "") + "\n  Foto: " + SITE + "p/" + rowPhoto(item) + ".html?f=2";
+    return "- " + rowName(item) + " × " + item.qty + (product.pmin ? " (" + fmt(product.pmin * item.qty) + ")" : " (precio por confirmar)") + (extra ? "\n  " + extra.charAt(0).toUpperCase() + extra.slice(1) : "") + "\n  Foto: " + SITE + "p/" + rowPhoto(item) + ".html?f=3";
   });
   $("#cart-send").href = wa("Hola TRIBALL, quiero pedir:\n" + (lines.length ? lines.join("\n") : "- (agregar productos)") + (total ? "\nTotal estimado: " + fmt(total) : "") + "\nConfírmame disponibilidad.");
 }
@@ -1016,7 +1019,7 @@ async function openSheet(slug, btn){
   $("#sheet-g").innerHTML = '<div class="empty" style="grid-column:1/-1">Cargando fotos…</div>';
   $("#sheet").hidden = false; document.body.style.overflow = "hidden"; $("#sheet-x").focus();
   try {
-    if (!cache[slug]) { const r = await fetch("m/"+slug+".json?v=20261115.3"); if(!r.ok) throw 0; cache[slug] = await r.json(); }
+    if (!cache[slug]) { const r = await fetch("m/"+slug+".json?v=20261118.1"); if(!r.ok) throw 0; cache[slug] = await r.json(); }
     drawSheetGrid(slug);
   } catch(e) {
     $("#sheet-g").innerHTML = `<div class="empty" style="grid-column:1/-1">No se pudieron cargar las fotos. Revisa tu conexión o <a href="${wa("Hola TRIBALL, quiero ver los colores de "+name)}" target="_blank" rel="noopener">pídelas por WhatsApp</a>.</div>`;
@@ -1063,6 +1066,16 @@ $("#team-btn").href = wa("Hola TRIBALL, vengo del catálogo. Quiero cotizar unif
 ["#cta-top","#cta-foot","#cta-bar","#fab"].forEach(s => $(s).href = wa("Hola TRIBALL, vengo del catálogo y quiero información"));
 
 drawAll();
+/* Aviso: la foto la arma WhatsApp en el teléfono del cliente; si envía muy rápido, llega solo el texto. */
+const waTip = document.createElement("div"); waTip.className = "wa-tip"; waTip.setAttribute("role","status");
+waTip.innerHTML = "<b>📸 Espera a que aparezca la foto</b><span>En WhatsApp, cuando veas la imagen del tenis en el mensaje, toca enviar.</span>";
+document.body.appendChild(waTip);
+let waTipT = null;
+document.addEventListener("click", e => {
+  const a = e.target.closest('a[href*="wa.me"]');
+  if (!a || !/p%2F/.test(a.href)) return;
+  waTip.classList.add("on"); clearTimeout(waTipT); waTipT = setTimeout(() => waTip.classList.remove("on"), 6000);
+});
 /* En tendencia: accesos directos a los productos que no son tenis. */
 const TREND = [
   {t:"Balacas delgadas", s:"x-balacas-licra", open:"x-balacas-licra"},
@@ -1088,7 +1101,7 @@ $("#trend-row").addEventListener("click", e => {
   const slug = "asics-mizuno-recien-llegados";
   $("#fresh-btn").addEventListener("click", () => openSheet(slug, $("#fresh-btn")));
   try {
-    if (!cache[slug]) { const r = await fetch("m/"+slug+".json?v=20261115.3"); if (r.ok) cache[slug] = await r.json(); }
+    if (!cache[slug]) { const r = await fetch("m/"+slug+".json?v=20261118.1"); if (r.ok) cache[slug] = await r.json(); }
     const g = cache[slug] || [];
     $("#fresh-row").innerHTML = g.slice(0, 8).map((c, i) => `<button type="button" class="fresh-it" data-fresh="${i}" aria-label="Ver modelo ${i+1}">${img(c.img, "Tenis recién llegado "+(i+1))}</button>`).join("");
   } catch(e) {}
