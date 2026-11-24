@@ -92,6 +92,41 @@
 .bf p{margin:0;max-width:48ch;color:rgba(255,255,255,.78)}
 .bf-btn{background:#fff;color:#000;margin-top:6px}.bf small{color:rgba(255,255,255,.55)}
 .fresh .fresh-btn{background:var(--hot)!important;color:#fff!important;padding:15px 24px!important;border-radius:999px!important;font-weight:800;display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer}
+.bfbar{background:#000;color:#fff;overflow:hidden;white-space:nowrap;font-size:.82rem;letter-spacing:.02em;border-bottom:2px solid var(--hot);position:relative;z-index:51}
+.bfbar-track{display:inline-flex;gap:28px;padding:9px 0;animation:bfmove 26s linear infinite}
+.bfbar-track b{color:var(--hot);font-weight:900;text-transform:uppercase}
+.bfbar-cd{color:#fff;font-weight:800;font-variant-numeric:tabular-nums}
+@keyframes bfmove{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.bf-cd{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:6px 0 4px}
+.bf-cd span{width:100%;color:rgba(255,255,255,.7);font-size:.85rem;text-transform:uppercase;letter-spacing:.06em}
+.bf-cd b{display:grid;place-items:center;min-width:64px;padding:10px 8px;border-radius:14px;background:#151515;border:1px solid #2a2a2a;font-size:1.7rem;font-weight:900;font-variant-numeric:tabular-nums;line-height:1}
+.bf-cd b small{font-size:.62rem;font-weight:600;color:rgba(255,255,255,.6);margin-top:4px;text-transform:uppercase}
+.bf-offers{list-style:none;padding:0;margin:8px 0;display:grid;gap:8px;width:100%;max-width:520px}
+.bf-offers li{display:flex;gap:12px;align-items:center;background:#111;border:1px solid #262626;border-radius:16px;padding:12px 14px}
+.bf-offers b{color:var(--hot);font-size:1.35rem;font-weight:900;min-width:104px}
+.bfpop{position:fixed;right:12px;top:84px;z-index:120;width:min(88vw,330px);background:linear-gradient(145deg,#000 0%,#1a1a1a 60%,#2a0f02 100%);color:#fff;border-radius:24px;padding:18px 18px 16px;box-shadow:0 20px 50px rgba(0,0,0,.45),0 0 0 2px var(--hot);overflow:hidden;transform:translateX(120%) rotate(4deg);opacity:0;transition:transform .55s cubic-bezier(.2,1.2,.3,1),opacity .3s}
+.bfpop.on{transform:none;opacity:1}
+.bfpop::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.12) 50%,transparent 70%);transform:translateX(-100%);animation:bfshine 3.2s ease-in-out infinite;pointer-events:none}
+@keyframes bfshine{60%,100%{transform:translateX(100%)}}
+.bfpop-x{position:absolute;top:8px;right:10px;border:0;background:rgba(255,255,255,.12);color:#fff;width:30px;height:30px;border-radius:50%;font-size:1.1rem;cursor:pointer;z-index:2}
+.bfpop-ball{position:absolute;right:52px;top:14px;font-size:1.9rem;animation:bfbounce 1.1s cubic-bezier(.3,0,.5,1) infinite alternate}
+.bfpop-ball.b2{right:92px;top:20px;font-size:1.5rem;animation-delay:.45s}
+@keyframes bfbounce{from{transform:translateY(0) rotate(0)}to{transform:translateY(-14px) rotate(25deg)}}
+.bfpop-tag{display:inline-block;background:var(--hot);color:#fff;font-weight:800;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;padding:5px 10px;border-radius:999px;animation:bfpulse 1.4s ease-in-out infinite}
+@keyframes bfpulse{50%{box-shadow:0 0 0 6px rgba(255,91,20,.25)}}
+.bfpop h3{margin:10px 0 8px;font-style:italic;font-weight:900;text-transform:uppercase;font-size:1.9rem;line-height:.9}
+.bfpop h3 span{color:var(--hot)}
+.bfpop ul{list-style:none;padding:0;margin:0 0 10px;display:grid;gap:4px;font-size:.92rem}
+.bfpop ul b{color:var(--hot)}
+.bfpop-cd{font-weight:800;font-size:.85rem;font-variant-numeric:tabular-nums;color:rgba(255,255,255,.85);margin-bottom:12px}
+.bfpop-acts{display:flex;gap:8px}
+.bfpop-acts a{flex:1;display:inline-flex;justify-content:center;align-items:center;gap:6px;border-radius:999px;padding:11px 10px;font-weight:800;text-decoration:none;font-size:.92rem}
+.bfpop-go{background:var(--hot);color:#fff}.bfpop-wa{background:#fff;color:#000}
+.bfpop-wa svg{width:17px;height:17px}
+.bfpill{position:fixed;left:12px;bottom:calc(92px + env(safe-area-inset-bottom,0px));z-index:110;border:0;background:#000;color:#fff;font:inherit;font-weight:800;font-size:.85rem;padding:10px 14px;border-radius:999px;box-shadow:0 0 0 2px var(--hot),0 8px 20px rgba(0,0,0,.3);cursor:pointer;animation:bfpulse 1.6s ease-in-out infinite}
+@media (prefers-reduced-motion:reduce){.bfbar-track,.bfpop::after,.bfpop-ball,.bfpop-tag,.bfpill{animation:none}}
+.bf .bf-btn{background:var(--hot)!important;color:#fff!important;padding:15px 24px!important;border-radius:999px!important;font-weight:800}
+.bf-offers b{min-width:124px;font-size:1.2rem}
 </style>
 <title>Catálogo TRIBALL</title>
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -433,6 +468,7 @@ section[id]{scroll-margin-top:118px}
 <symbol id="ar" viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></symbol>
 </defs></svg>
 
+<div class="bfbar" id="bfbar" hidden><div class="bfbar-track"><span>🖤 BLACK FRIDAY · 24 NOV – 2 DIC</span><b>Productos con 40% OFF</b><span>🧦 3 pares de medias pagando 2</span><b>Descuento en todos los productos</b><span class="bfbar-cd" data-cd>—</span><span>🖤 BLACK FRIDAY · 24 NOV – 2 DIC</span><b>Productos con 40% OFF</b><span>🧦 3 pares de medias pagando 2</span><b>Descuento en todos los productos</b><span class="bfbar-cd" data-cd>—</span></div></div>
 <header class="top">
   <div class="wrap">
     <a href="#hero" aria-label="TRIBALL, inicio"><img class="logo" src="data:image/png;base64,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" alt="TRIBALL" width="89" height="20"></a>
@@ -478,11 +514,16 @@ section[id]{scroll-margin-top:118px}
 <!-- Black Friday -->
 <section class="bf" id="blackfriday" aria-labelledby="h-bf">
   <div class="wrap">
-    <span class="bf-tag">Muy pronto</span>
+    <span class="bf-tag" id="bf-tag">24 nov – 2 dic</span>
     <h2 class="disp" id="h-bf">Black<br>Friday</h2>
-    <p>Prepárate: se vienen los mejores precios del año en tenis y accesorios. Escríbenos y te avisamos primero cuando empiece.</p>
-    <a class="btn bf-btn" id="bf-btn" target="_blank" rel="noopener"><svg class="wa-ico"><use href="#wa"/></svg>Avísame del Black Friday</a>
-    <small>La ropa original Sportfitness no aplica descuentos.</small>
+    <div class="bf-cd" id="bf-cd" aria-live="polite"></div>
+    <ul class="bf-offers">
+      <li><b>40% OFF</b><span>en productos seleccionados</span></li>
+      <li><b>3x2</b><span>en medias: llevas 3 pares y pagas 2</span></li>
+      <li><b>Descuento</b><span>en todos los productos de la tienda</span></li>
+    </ul>
+    <a class="btn bf-btn" id="bf-btn" target="_blank" rel="noopener"><svg class="wa-ico"><use href="#wa"/></svg>Quiero mi descuento</a>
+    <small>Tenis de baloncesto y voleibol, balones, protección y accesorios. La ropa original Sportfitness no aplica descuentos.</small>
   </div>
 </section>
 
@@ -676,6 +717,17 @@ section[id]{scroll-margin-top:118px}
   <ol class="sg-steps"><li>Pon el pie sobre una hoja blanca en el piso, con el talón contra la pared.</li><li>Marca con un lápiz hasta donde llega tu dedo más largo.</li><li>Mide en centímetros desde el borde de la hoja hasta la marca y búscalo en la fila CM.</li></ol>
   <a class="btn sg-wa" id="sg-wa" target="_blank" rel="noopener"><svg class="wa-ico"><use href="#wa"/></svg>¿Dudas? Te asesoramos</a>
 </div></dialog>
+<aside class="bfpop" id="bfpop" hidden aria-label="Black Friday">
+  <button class="bfpop-x" id="bfpop-x" type="button" aria-label="Cerrar">×</button>
+  <div class="bfpop-ball" aria-hidden="true">🏀</div>
+  <div class="bfpop-ball b2" aria-hidden="true">🏐</div>
+  <span class="bfpop-tag" id="bfpop-tag">Black Friday</span>
+  <h3>Black Friday<br><span>TRIBALL</span></h3>
+  <ul><li><b>40% OFF</b> en productos</li><li><b>3x2</b> en medias</li><li><b>Descuento</b> en todo</li></ul>
+  <div class="bfpop-cd" data-cd></div>
+  <div class="bfpop-acts"><a href="#blackfriday" class="bfpop-go" id="bfpop-go">Ver ofertas</a><a class="bfpop-wa" id="bfpop-wa" target="_blank" rel="noopener"><svg class="wa-ico"><use href="#wa"/></svg>Pedir</a></div>
+</aside>
+<button class="bfpill" id="bfpill" type="button" hidden>🔥 Black Friday</button>
 <div class="sheet" id="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="sheet-t">
   <div class="sheet-in">
     <div class="grab" aria-hidden="true"></div>
@@ -722,7 +774,7 @@ const PHOTO = {};
 async function loadPhoto(el){
   const slug = el.dataset.lazy; if (!slug || el.dataset.req) return; el.dataset.req = 1;
   try {
-    if (!PHOTO[slug]) PHOTO[slug] = fetch("c/"+slug+".json?v=20261124.1").then(r => { if(!r.ok) throw 0; return r.json(); });
+    if (!PHOTO[slug]) PHOTO[slug] = fetch("c/"+slug+".json?v=20261124.2").then(r => { if(!r.ok) throw 0; return r.json(); });
     const d = await PHOTO[slug];
     el.onload = () => el.classList.add("ld"); el.src = d.img;
   } catch(e) { el.classList.add("ld","fail"); }
@@ -1051,7 +1103,7 @@ async function openSheet(slug, btn){
   $("#sheet-g").innerHTML = '<div class="empty" style="grid-column:1/-1">Cargando fotos…</div>';
   $("#sheet").hidden = false; document.body.style.overflow = "hidden"; $("#sheet-x").focus();
   try {
-    if (!cache[slug]) { const r = await fetch("m/"+slug+".json?v=20261124.1"); if(!r.ok) throw 0; cache[slug] = await r.json(); }
+    if (!cache[slug]) { const r = await fetch("m/"+slug+".json?v=20261124.2"); if(!r.ok) throw 0; cache[slug] = await r.json(); }
     drawSheetGrid(slug);
   } catch(e) {
     $("#sheet-g").innerHTML = `<div class="empty" style="grid-column:1/-1">No se pudieron cargar las fotos. Revisa tu conexión o <a href="${wa("Hola TRIBALL, quiero ver los colores de "+name)}" target="_blank" rel="noopener">pídelas por WhatsApp</a>.</div>`;
@@ -1098,7 +1150,35 @@ $("#team-btn").href = wa("Hola TRIBALL, vengo del catálogo. Quiero cotizar unif
 ["#cta-top","#cta-foot","#cta-bar","#fab"].forEach(s => $(s).href = wa("Hola TRIBALL, vengo del catálogo y quiero información"));
 
 drawAll();
-$("#bf-btn").href = wa("Hola TRIBALL, quiero que me avisen cuando empiece el Black Friday 🖤");
+/* Black Friday: 24 nov – 2 dic (hora Colombia). Se enciende y se apaga solo. */
+(function(){
+  const START = Date.UTC(2026,10,24,5,0,0), END = Date.UTC(2026,11,3,4,59,59);
+  const now = () => Date.now();
+  if (now() > END) { $("#blackfriday").hidden = true; return; }
+  const live = () => now() >= START;
+  const two = n => String(n).padStart(2,"0");
+  function left(){ const t = Math.max(0, (live()?END:START) - now()); const d=Math.floor(t/864e5), hh=Math.floor(t%864e5/36e5), m=Math.floor(t%36e5/6e4), s=Math.floor(t%6e4/1e3); return {d,hh,m,s}; }
+  function tick(){
+    const {d,hh,m,s} = left(), lbl = live() ? "Termina en" : "Empieza en";
+    document.querySelectorAll("[data-cd]").forEach(el => el.textContent = `⏳ ${lbl} ${d}d ${two(hh)}h ${two(m)}m ${two(s)}s`);
+    $("#bf-cd").innerHTML = `<span>${lbl}</span><b>${d}<small>días</small></b><b>${two(hh)}<small>horas</small></b><b>${two(m)}<small>min</small></b><b>${two(s)}<small>seg</small></b>`;
+    $("#bf-tag").textContent = live() ? "¡Ya empezó! · 24 nov – 2 dic" : "Empieza el 24 de noviembre";
+    $("#bfpop-tag").textContent = live() ? "¡Ya empezó!" : "Empieza el 24 nov";
+    if (now() > END) location.reload();
+  }
+  $("#bfbar").hidden = false;
+  tick(); setInterval(tick, 1000);
+  const msg = "Hola TRIBALL, vengo del catálogo y quiero aprovechar el Black Friday 🖤";
+  $("#bf-btn").href = wa(msg); $("#bfpop-wa").href = wa(msg);
+  const pop = $("#bfpop"), pill = $("#bfpill");
+  let closed = false; try { closed = sessionStorage.getItem("tb-bf") === "1"; } catch {}
+  const show = () => { pop.hidden = false; requestAnimationFrame(() => pop.classList.add("on")); pill.hidden = true; };
+  const hide = () => { pop.classList.remove("on"); setTimeout(() => { pop.hidden = true; pill.hidden = false; }, 300); try { sessionStorage.setItem("tb-bf","1"); } catch {} };
+  if (closed) pill.hidden = false; else setTimeout(show, 1200);
+  $("#bfpop-x").addEventListener("click", hide);
+  $("#bfpop-go").addEventListener("click", hide);
+  pill.addEventListener("click", show);
+})();
 /* Aviso: la foto la arma WhatsApp en el teléfono del cliente; si envía muy rápido, llega solo el texto. */
 const waTip = document.createElement("div"); waTip.className = "wa-tip"; waTip.setAttribute("role","status");
 waTip.innerHTML = "<b>📸 Espera a que aparezca la foto</b><span>En WhatsApp, cuando veas la imagen del tenis en el mensaje, toca enviar.</span>";
@@ -1134,7 +1214,7 @@ $("#trend-row").addEventListener("click", e => {
   const slug = "asics-metarise-2";
   $("#fresh-btn").addEventListener("click", () => openSheet(slug, $("#fresh-btn")));
   try {
-    if (!cache[slug]) { const r = await fetch("m/"+slug+".json?v=20261124.1"); if (r.ok) cache[slug] = await r.json(); }
+    if (!cache[slug]) { const r = await fetch("m/"+slug+".json?v=20261124.2"); if (r.ok) cache[slug] = await r.json(); }
     const g = cache[slug] || [];
     $("#fresh-row").innerHTML = g.slice(0, 8).map((c, i) => `<button type="button" class="fresh-it" data-fresh="${i}" aria-label="Ver color ${i+1}">${img(c.img, "ASICS Metarise 2 color "+(i+1))}</button>`).join("");
   } catch(e) {}
