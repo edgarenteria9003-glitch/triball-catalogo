@@ -127,6 +127,7 @@
 @media (prefers-reduced-motion:reduce){.bfbar-track,.bfpop::after,.bfpop-ball,.bfpop-tag,.bfpill{animation:none}}
 .bf .bf-btn{background:var(--hot)!important;color:#fff!important;padding:15px 24px!important;border-radius:999px!important;font-weight:800}
 .bf-offers b{min-width:124px;font-size:1.2rem}
+.cart-send.is-empty{background:var(--mist)!important;color:var(--muted)!important;box-shadow:none}
 </style>
 <title>Catálogo TRIBALL</title>
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -874,7 +875,12 @@ function renderCart() {
     return "- " + rowName(item) + " × " + item.qty + (product.pmin ? " (" + fmt(product.pmin * item.qty) + ")" : " (precio por confirmar)") + (extra ? "\n  " + extra.charAt(0).toUpperCase() + extra.slice(1) : "") + "\n  Foto: " + SITE + "p/" + rowPhoto(item) + ".html?f=3";
   });
   if (gift) lines.push(nike ? "- Medias a elección (+$5.000, en vez de las de regalo) — te digo cuáles" : "- Par de medias de regalo 🎁");
+  const send = $("#cart-send");
+  send.classList.toggle("is-empty", !cart.length);
+  send.textContent = cart.length ? "Pedir por WhatsApp" : "Agrega productos para pedir";
+  send.setAttribute("aria-disabled", cart.length ? "false" : "true");
   $("#cart-send").href = wa("Hola TRIBALL, quiero pedir:\n" + (lines.length ? lines.join("\n") : "- (agregar productos)") + (total ? "\nTotal estimado: " + fmt(total) : "") + "\nConfírmame disponibilidad.");
+  if (!cart.length) send.removeAttribute("href");
 }
 function saveCart() {
   try { localStorage.setItem(CART_KEY, JSON.stringify(cart)); } catch {}
@@ -901,6 +907,13 @@ document.addEventListener("click", event => {
   item.qty += Number(step.dataset.cartStep);
   cart = cart.filter(row => row.qty > 0);
   saveCart();
+});
+/* Con el carrito vacío no se envía un mensaje sin productos. */
+$("#cart-send").addEventListener("click", e => {
+  if (cart.length) return;
+  e.preventDefault();
+  $("#cart-dialog").close();
+  $("#tenis").scrollIntoView({behavior:"smooth"});
 });
 $("#cart-fab").addEventListener("click", () => { renderCart(); $("#cart-dialog").showModal(); });
 $("#cart-close").addEventListener("click", () => $("#cart-dialog").close());
